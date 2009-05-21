@@ -1,0 +1,1224 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Text;
+using Ra2Reload.Core;
+//using Ra2Reload.Graphics.Effects;
+using Ra2Reload.IO;
+using Ra2Reload.IsoMap;
+using Ra2Reload.Logic;
+using Ra2Reload.MathLib;
+using Ra2Reload.Media;
+using SlimDX;
+using SlimDX.Direct3D9;
+
+namespace Ra2Reload.GraphicsEngine
+{
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct TerrainVertex
+    {
+        public Vector3 pos;
+        ////public Vector3 n;
+        public float u0, v0;
+        public float u1, v1;
+
+        public static VertexFormat Format
+        {
+            get { return VertexFormat.Position | VertexFormat.Texture2; }
+        }
+    }
+
+    public unsafe class Terrain : SceneObject
+    {
+        class TerrainTreeNodeDataList
+        {
+            TerrainTreeNodeData[] array;
+
+            int count;
+
+            public TerrainTreeNodeDataList(int cap)
+            {
+                array = new TerrainTreeNodeData[cap];
+            }
+            public void Add(TerrainTreeNodeData item)
+            {
+                array[count++] = item;
+            }
+            public void Clear()
+            {
+                Array.Clear(array, 0, count);
+                count = 0;
+            }
+
+            public int Count
+            {
+                get { return count; }
+            }
+
+            public TerrainTreeNodeData this[int idx]
+            {
+                get { return array[idx]; }
+            }
+        }
+
+        const int NMWidthScale = 3;
+        const int NMHeightScale = 3;
+
+        /// <summary>
+        /// 水平方向上单元长度
+        /// </summary>
+        public const float HorizontalUnit = 4f;
+        /// <summary>
+        /// 垂直方向上单元长度
+        /// </summary>
+        public const float VerticalUnit = 1.634f;// MathEx.Root2 * 2;
+
+        TerrainTreeNode terrainTree;
+        //CellData[] cellData;
+        //GameModel[][][] tileModels;
+        //bool[][] supportsModel;
+
+        VertexBuffer[] vtxBuffer;
+        IndexBuffer[] idxBuffer;
+        IndexBuffer[] idxBuffer2;
+        int[] ibSizes;
+        int[] ibSizes2;
+        int groupCount;
+
+        MeshMaterial[] materials;
+        MeshMaterial[] secMaterials;
+
+        Device device;
+
+        TileTexturePackManager tileTexture;
+
+        TileBase[][] tiles;
+
+        /// <summary>
+        /// HeightMap中的三角形的数目
+        /// </summary>
+        int totalTriangleCount;
+        /// <summary>
+        /// HeightMap中的顶点数目
+        /// </summary>
+        int totalVertexCount;
+
+        /// <summary>
+        /// HeightMap中的地形宽度
+        /// </summary>
+        int width;
+        /// <summary>
+        /// HeightMap中的地形高度
+        /// </summary>
+        int height;
+
+        Battle gameBattle;
+
+        Queue<TerrainTreeNode> queue;
+        /// <summary>
+        /// 用于 渲染时 临时存储除了用第一种材质以外的cell
+        /// </summary>
+        TerrainTreeNodeDataList[] renderIdxBuffer;
+        TerrainTreeNodeDataList renderIBNoTex;
+
+        TerrainTreeNodeDataList tileModelBuffer;
+
+        Texture normalMap;
+        Texture secNormalMap;
+
+
+        Effect terrainLighting;
+        VertexDeclaration vtxDecl;
+        //TerrainLightingEffect terrainLighting;
+        EffectHandle tlParamLa;
+        EffectHandle tlParamLd;
+        EffectHandle tlParamLs;
+        EffectHandle tlParamKa;
+        EffectHandle tlParamKd;
+        EffectHandle tlParamKs;
+        EffectHandle tlParamPwr;
+        EffectHandle tlParamLdir;
+        EffectHandle tlParamVpos;
+
+        EffectHandle tlParamTex0;
+        EffectHandle tlParamTex1;
+
+        EffectHandle tlParamMVP;
+        //EffectHandle tlParamMV;
+
+        Light terrainLight;
+
+
+
+        public void GetTerrainLight(out Light light)
+        {
+            light = terrainLight;
+        }
+        public void SetTerrainLight(ref Light light)
+        {
+            terrainLight = light;
+        }
+        public void SetTerrainLight(Light light)
+        {
+            terrainLight = light;
+        }
+
+        void FillNormal(int x, int y,
+            int normalMapWidth, int normalMapHeight, int* norMapData,
+            TerrainVertex* left, TerrainVertex* right, TerrainVertex* top, TerrainVertex* bottom, TerrainVertex* centre)
+        {
+            // normalMap
+            int tx = y * NMHeightScale;
+            int ty = x * NMWidthScale;
+
+
+            int* cellN1 = norMapData + ty * normalMapWidth + tx;
+            int* cellN2 = cellN1 + 1;
+            int* cellN3 = cellN1 + 2;
+            int* cellN4 = cellN1 + normalMapWidth;
+            int* cellN5 = cellN4 + 1;
+            int* cellN6 = cellN4 + 2;
+            int* cellN7 = cellN4 + normalMapWidth;
+            int* cellN8 = cellN7 + 1;
+            int* cellN9 = cellN7 + 2;
+
+
+            Vector3 pn410;
+            MathEx.ComputePlaneNormal(ref centre->pos, ref left->pos, ref top->pos, out pn410);
+
+            Vector3 pn240;
+            MathEx.ComputePlaneNormal(ref right->pos, ref centre->pos, ref top->pos, out pn240);
+
+            Vector3 pn143;
+            MathEx.ComputePlaneNormal(ref left->pos, ref centre->pos, ref bottom->pos, out pn143);
+
+            Vector3 pn423;
+            MathEx.ComputePlaneNormal(ref centre->pos, ref right->pos, ref bottom->pos, out pn423);
+
+            //Vector3.Negate(ref pn410, out pn410);
+            //Vector3.Negate(ref pn240, out pn240);
+            //Vector3.Negate(ref pn143, out pn143);
+            //Vector3.Negate(ref pn423, out pn423);
+
+            cellN4[0] = MathEx.Vector2ARGB(ref pn240);
+            cellN2[0] = MathEx.Vector2ARGB(ref pn410);
+            cellN8[0] = MathEx.Vector2ARGB(ref pn423);
+            cellN6[0] = MathEx.Vector2ARGB(ref pn143);
+
+            Vector3 cn;
+            Vector3.Add(ref pn410, ref pn240, out cn);
+            Vector3.Add(ref cn, ref pn143, out cn);
+            Vector3.Add(ref cn, ref pn423, out cn);
+            cn.Normalize();
+            cellN5[0] = MathEx.Vector2ARGB(ref cn);
+
+            Vector3 v1, v2, v3, v4;
+            Vector3.Add(ref pn410, ref pn240, out v1);
+            Vector3.Add(ref pn410, ref pn143, out v2);
+            Vector3.Add(ref pn240, ref pn423, out v3);
+            Vector3.Add(ref pn423, ref pn143, out v4);
+
+            v1.Normalize();
+            v2.Normalize();
+            v3.Normalize();
+            v4.Normalize();
+
+            cellN1[0] = MathEx.Vector2ARGB(ref v1);
+            cellN3[0] = MathEx.Vector2ARGB(ref v2);
+            cellN7[0] = MathEx.Vector2ARGB(ref v3);
+            cellN9[0] = MathEx.Vector2ARGB(ref v4);
+
+        }
+
+        void CalculateTexCoord(int x, int y, float invWidth, float invHeight, ref Rectangle rect, float packw, float packh,
+            TerrainVertex* left, TerrainVertex* right, TerrainVertex* top, TerrainVertex* bottom, TerrainVertex* centre)
+        {
+            // cell
+            //top->pos = new Vector3();
+            top->u0 = (float)rect.Left / packw;
+            top->v0 = (float)rect.Top / packh;
+            top->u1 = y * invHeight;
+            top->v1 = x * invWidth;
+
+            //left->pos = new Vector3();
+            left->u0 = (float)rect.Left / packw;
+            left->v0 = (float)(rect.Top + rect.Height) / packh;
+            left->u1 = (y + 1) * invHeight;
+            left->v1 = x * invWidth;
+
+            //right->pos = new Vector3();
+            right->u0 = (float)(rect.Left + rect.Width) / packw;
+            right->v0 = (float)(rect.Top) / packh;
+            right->u1 = y * invHeight;
+            right->v1 = (x + 1) * invWidth;
+
+            //bottom->pos = new Vector3();
+            bottom->u0 = (float)(rect.Left + rect.Width) / packw;
+            bottom->v0 = (float)(rect.Top + rect.Height) / packh;
+            bottom->u1 = (y + 1) * invHeight;
+            bottom->v1 = (x + 1) * invWidth;
+
+
+            centre->u0 = (float)(rect.Left + rect.Width * 0.5f) / packw;
+            centre->v0 = (float)(rect.Top + rect.Height * 0.5f) / packh;
+            centre->u1 = ((float)y + 0.5f) * invHeight;
+            centre->v1 = ((float)x + 0.5f) * invWidth;
+        }
+
+        public Terrain(Battle bat, Device dev, MapBase map, TheaterBase theater, CellData[] cellData)
+            : base(true)
+        {
+            gameBattle = bat;
+            queue = new Queue<TerrainTreeNode>();
+            device = dev;
+            //CellData[] cellData = cellData;
+
+            //HeightMap heightMap = map.GetHeightMap();
+
+            this.width = map.Width + map.Height - 1;// heightMap.Width;
+            this.height = this.width;
+            transformation = Matrix.Identity;
+
+            tileTexture = new TileTexturePackManager(device, theater.TileCount);
+            tileTexture.Lock();
+            for (int i = 0; i < theater.TileCount; i++)
+            {
+                ImageBase[][] images = theater.GetTileTexture(i);
+
+                if (images != null) // 如果有地块
+                {
+                    tileTexture.Append(i, images);
+                }
+            }
+            tileTexture.Unlock();
+
+            tiles = theater.Tiles;
+            //supportsModel = new bool[tiles.Length][];
+            //tileModels = new GameModel[tiles.Length][][];
+
+            int normalMapWidth = width * NMWidthScale;
+            int normalMapHeight = width * NMHeightScale;
+
+            normalMap = new Texture(device, normalMapWidth, normalMapHeight, 1, Usage.None, Format.A8R8G8B8, Pool.Managed);
+            normalMap.AutoMipGenerationFilter = TextureFilter.Anisotropic;
+            secNormalMap = new Texture(device, normalMapWidth, normalMapHeight, 1, Usage.None, Format.A8R8G8B8, Pool.Managed);
+            secNormalMap.AutoMipGenerationFilter = TextureFilter.Anisotropic;
+
+            int* norMapData = (int*)normalMap.LockRectangle(0, LockFlags.None).Data.DataPointer.ToPointer();
+            int* secNorMapData = (int*)secNormalMap.LockRectangle(0, LockFlags.None).Data.DataPointer.ToPointer();
+
+
+            int totalCellCount = cellData.Length;
+
+
+            // create buffers used for rendering
+            tileModelBuffer = new TerrainTreeNodeDataList(totalCellCount);// new List<TerrainTreeNodeData>();
+
+            renderIdxBuffer = new TerrainTreeNodeDataList[tileTexture.Count];
+            for (int i = 0; i < renderIdxBuffer.Length; i++)
+            {
+                renderIdxBuffer[i] = new TerrainTreeNodeDataList(totalCellCount);
+            }
+            renderIBNoTex = new TerrainTreeNodeDataList(totalCellCount);
+
+
+            totalVertexCount = map.CellCount * 5;
+            totalTriangleCount = map.CellCount * 4;
+
+
+            // build terrain tree
+            TerrainTreeNodeData[] treeData = new TerrainTreeNodeData[totalCellCount];
+
+            for (int i = 0; i < totalCellCount; i++)
+            {
+                treeData[i] = new TerrainTreeNodeData();
+                treeData[i].cellIndex = i;
+                treeData[i].x = cellData[i].x;
+                treeData[i].y = cellData[i].y;
+            }
+
+            // group cells
+            List<TerrainTreeNodeData[]> groups = new List<TerrainTreeNodeData[]>();
+            GroupingCallBack gpcb = delegate(TerrainTreeNodeData[] data)
+            {
+                for (int i = 0; i < data.Length; i++)
+                {
+                    data[i].groupIdx = groups.Count;
+                }
+                groups.Add(data);
+            };
+            terrainTree = new TerrainTreeNode(treeData, 0, 0, width, height, gpcb);
+
+            // 数量不够，只分一个组
+            if (groups.Count == 0)
+            {
+                groupCount = 1;
+                groups.Add(treeData);
+            }
+
+            groupCount = groups.Count;
+            vtxBuffer = new VertexBuffer[groupCount];
+            idxBuffer = new IndexBuffer[groupCount];
+            idxBuffer2 = new IndexBuffer[groupCount];
+            ibSizes = new int[groupCount];
+            ibSizes2 = new int[groupCount];
+
+            TerrainVertex*[] vbPointers = new TerrainVertex*[groupCount];
+
+
+            float invHeight = 1.0f / height;
+            float invWidth = 1.0f / width;
+
+            Random rnd = new Random();
+            for (int i = 0; i < groupCount; i++)
+            {
+                // 绘制时的IB和VB对应
+                int cellCount = groups[i].Length;
+
+                int dblLayerCount = 0;
+                int dblLayerIndex = cellCount;
+
+                // 预先检查双层block
+                for (int j = 0; j < cellCount; j++)
+                {
+                    int cellIndex = groups[i][j].cellIndex;
+
+                    BlockBits bit = tiles[cellData[cellIndex].tile][0].GetBlockBits(cellData[cellIndex].subTile);
+                    if ((bit & BlockBits.HasDoubleLayer) == BlockBits.HasDoubleLayer)
+                    {
+                        dblLayerCount++;
+                    }
+                }
+
+                int vertexCount = (cellCount + dblLayerCount) * 5;
+                //int triangleCount = cellCount * 4;
+
+
+                int ibSize = 2 * 3 * cellCount * 4;
+                idxBuffer[i] = new IndexBuffer(dev, ibSize, Usage.Dynamic | Usage.WriteOnly, Pool.Default, true);
+                ibSizes[i] = ibSize;
+
+                if (dblLayerCount > 0)
+                {
+                    ibSize = 2 * 3 * dblLayerCount * 4;
+                    idxBuffer2[i] = new IndexBuffer(dev, ibSize, Usage.Dynamic | Usage.WriteOnly, Pool.Default, true);
+                    ibSizes2[i] = ibSize;
+                }
+
+                int vbSize = sizeof(TerrainVertex) * vertexCount;
+                vtxBuffer[i] = new VertexBuffer(device, vbSize, Usage.None, TerrainVertex.Format, Pool.Managed);
+
+                TerrainVertex* dst = (TerrainVertex*)vtxBuffer[i].Lock(0, 0, LockFlags.None).DataPointer.ToPointer();
+                vbPointers[i] = dst;
+
+
+
+                for (int j = 0; j < cellCount; j++)
+                {
+                    // cell在treeData中的索引
+                    int cellIndex = groups[i][j].cellIndex;
+
+                    // rects[i]表示这个cell对应的subTile的第i种形态所占的区域
+                    Rectangle[] rects = tileTexture
+                        [cellData[cellIndex].tile]
+                        [cellData[cellIndex].subTile];
+
+                    // packIndex[i]表示这个cell对应的subTile的第i种形态所在的纹理包
+                    int[] packIndex = tileTexture.GetOwnerTexPack(
+                        cellData[cellIndex].tile,
+                        cellData[cellIndex].subTile);
+
+                    bool[] hasTexture = tileTexture.GetHasTexture(
+                        cellData[cellIndex].tile,
+                        cellData[cellIndex].subTile);
+
+                    int tileImageRectIndex;
+                    if (rects.Length > 1)
+                    {
+                        tileImageRectIndex = rnd.Next(rects.Length);
+                    }
+                    else
+                    {
+                        tileImageRectIndex = 0;
+                    }
+
+                    //treeData[cellIndex].varision = tileImageRectIndex;
+                    BlockBits bit = tiles[cellData[cellIndex].tile][tileImageRectIndex].GetBlockBits(cellData[cellIndex].subTile);
+
+                    if ((bit & BlockBits.HasTileModel) == BlockBits.HasTileModel)
+                    {
+                        treeData[cellIndex].model = tiles[cellData[cellIndex].tile][tileImageRectIndex].GetTileModel(cellData[cellIndex].subTile);
+                    }
+
+                    treeData[cellIndex].visible = (bit & BlockBits.Invisible) != BlockBits.Invisible;
+
+
+
+                    ITileTexturePack pack = tileTexture.GetTileTexture(packIndex[tileImageRectIndex]);
+                    if (hasTexture[tileImageRectIndex])
+                    {
+                        treeData[cellIndex].texturePack = packIndex[tileImageRectIndex];
+                    }
+                    else
+                    {
+                        treeData[cellIndex].texturePack = -1;
+                    }
+                    float packw = pack.Width;
+                    float packh = pack.Height;
+
+                    int x = treeData[cellIndex].x;
+                    int y = treeData[cellIndex].y;
+
+
+                    TerrainVertex* top = dst + j * 5;
+                    TerrainVertex* left = dst + j * 5 + 1;
+                    TerrainVertex* right = dst + j * 5 + 2;
+                    TerrainVertex* bottom = dst + j * 5 + 3;
+                    TerrainVertex* centre = dst + j * 5 + 4;
+
+
+                    CalculateTexCoord(x, y, invWidth, invHeight, ref rects[tileImageRectIndex], packw, packh,
+                        left, right, top, bottom, centre);
+
+
+                    float px = x * HorizontalUnit;
+                    float py = cellData[cellIndex].z * VerticalUnit;
+                    float pz = y * HorizontalUnit;
+
+                    top->pos = new Vector3(px, py, pz);
+                    left->pos = new Vector3(px, py, pz + HorizontalUnit);
+                    right->pos = new Vector3(px + HorizontalUnit, py, pz);
+                    bottom->pos = new Vector3(px + HorizontalUnit, py, pz + HorizontalUnit);
+                    centre->pos = new Vector3(px + HorizontalUnit * 0.5f, py, pz + HorizontalUnit * 0.5f);
+
+                    map.SetCellData(cellIndex, false, top, left, right, bottom, centre);
+
+                    FillNormal(x, y, normalMapWidth, normalMapHeight, norMapData, left, right, top, bottom, centre);
+
+                    float avgHeight = 0.2f * (top->pos.Y + left->pos.Y + right->pos.Y + bottom->pos.Y + centre->pos.Y);
+
+                    float lodFactor =
+                        MathEx.Sqr(top->pos.Y + bottom->pos.Y - 2 * avgHeight) +
+                        MathEx.Sqr(left->pos.Y + right->pos.Y - 2 * avgHeight) +
+                        MathEx.Sqr(centre->pos.Y - avgHeight);
+
+                    treeData[cellIndex].lodFactor = 1.0f / lodFactor;
+                    treeData[cellIndex].lodHeight = avgHeight;
+
+                    treeData[cellIndex].vbIndex = j * 5;
+
+
+                    if ((bit & BlockBits.HasDoubleLayer) == BlockBits.HasDoubleLayer)
+                    {
+                        treeData[cellIndex].vbSecIndex = 5 * dblLayerIndex;
+
+                        top = dst + dblLayerIndex * 5;
+                        left = dst + dblLayerIndex * 5 + 1;
+                        right = dst + dblLayerIndex * 5 + 2;
+                        bottom = dst + dblLayerIndex * 5 + 3;
+                        centre = dst + dblLayerIndex * 5 + 4;
+
+                        CalculateTexCoord(x, y, invWidth, invHeight, ref rects[tileImageRectIndex], packw, packh,
+                            left, right, top, bottom, centre);
+
+                        top->pos = new Vector3(px, py, pz);
+                        left->pos = new Vector3(px, py, pz + HorizontalUnit);
+                        right->pos = new Vector3(px + HorizontalUnit, py, pz);
+                        bottom->pos = new Vector3(px + HorizontalUnit, py, pz + HorizontalUnit);
+                        centre->pos = new Vector3(px + HorizontalUnit * 0.5f, py, pz + HorizontalUnit * 0.5f);
+
+                        map.SetCellData(cellIndex, true, top, left, right, bottom, centre);
+
+                        FillNormal(x, y, normalMapWidth, normalMapHeight, secNorMapData, left, right, top, bottom, centre);
+
+                        avgHeight = 0.2f * (top->pos.Y + left->pos.Y + right->pos.Y + bottom->pos.Y + centre->pos.Y);
+                        lodFactor =
+                               MathEx.Sqr(top->pos.Y + bottom->pos.Y - 2 * avgHeight) +
+                               MathEx.Sqr(left->pos.Y + right->pos.Y - 2 * avgHeight) +
+                               MathEx.Sqr(centre->pos.Y - avgHeight);
+
+                        treeData[cellIndex].lodFactor2 = 1.0f / lodFactor;
+                        treeData[cellIndex].lodHeight2 = avgHeight;
+
+                        dblLayerIndex++;
+                    }
+                }
+            }
+
+            normalMap.UnlockRectangle(0);
+            secNormalMap.UnlockRectangle(0);
+
+            //Texture.ToFile(normalMap, @"C:\Documents and Settings\Yuri\桌面\test.png", ImageFileFormat.Png);
+
+            materials = new MeshMaterial[tileTexture.Count];
+            for (int i = 0; i < tileTexture.Count; i++)            
+            {
+                materials[i] = new MeshMaterial(dev);
+                materials[i].mat = BlockMaterial.DefBlockColor;
+                materials[i].SetTexture(0, normalMap);
+                materials[i].SetTexture(1, tileTexture.GetTileTexture(i).Texture);                
+            }
+
+            secMaterials = new MeshMaterial[tileTexture.Count];
+            for (int i = 0; i < tileTexture.Count; i++)
+            {
+                secMaterials[i] = new MeshMaterial(dev);
+                secMaterials[i].mat = BlockMaterial.DefBlockColor;
+                secMaterials[i].SetTexture(0, secNormalMap);
+                secMaterials[i].SetTexture(1, tileTexture.GetTileTexture(i).Texture);
+            }
+
+
+            terrainTree.CalculateBoudingVolume(vbPointers);
+
+            Vector3 rVec = new Vector3(terrainTree.bounding.Radius);
+            Vector3.Add(ref terrainTree.bounding.Center, ref rVec, out boundingBox.Maximum);
+            Vector3.Subtract(ref terrainTree.bounding.Center, ref rVec, out boundingBox.Minimum);
+
+
+            vbPointers = null;
+            for (int i = 0; i < groupCount; i++)
+            {
+                vtxBuffer[i].Unlock();
+            }
+            groups = null;
+
+            LoadLightingEffect();
+        }
+
+        void LoadLightingEffect()
+        {
+            FileLocation fl = FileSystem.Instance.Locate(FileSystem.CacheMix + "TerrainLighting.fx", FileSystem.GameResLR);
+            ArchiveStreamReader sr = new ArchiveStreamReader(fl);
+
+            string code = sr.ReadToEnd();
+            terrainLighting = Effect.FromString(device, code, null, null, ShaderFlags.None, null);
+            sr.Close();
+            terrainLighting.Technique = new EffectHandle("TerrainLighting");
+
+            tlParamLa = new EffectHandle("I_a");
+            tlParamLd = new EffectHandle("I_d");
+            tlParamLs = new EffectHandle("I_s");
+            tlParamKa = new EffectHandle("k_a");
+            tlParamKd = new EffectHandle("k_d");
+            tlParamKs = new EffectHandle("k_s");
+            tlParamPwr = new EffectHandle("power");
+            tlParamLdir = new EffectHandle("lightDirection");
+
+            tlParamTex0 = new EffectHandle("Tex0");
+            tlParamTex1 = new EffectHandle("Tex1");
+
+            tlParamVpos = new EffectHandle("viewerPos");
+            tlParamMVP = new EffectHandle("mvp");
+            //tlParamMV = new EffectHandle("modelview");
+
+            VertexElement[] elements = D3DX.DeclaratorFromFVF(TerrainVertex.Format);
+            vtxDecl = new VertexDeclaration(device, elements);
+
+            //sun = Mesh.CreateSphere(device, 15, 15, 15);
+        }
+
+
+        public BoundingSphere BoundingVolume
+        {
+            get { return terrainTree.bounding; }
+        }
+
+        //#region IRenderable 成员
+
+        //public unsafe void Render()
+        //{
+        //    device.SetTransform(TransformState.World, transformation);
+        //    device.SetRenderState<Cull>(RenderState.CullMode, Cull.Counterclockwise);
+
+        //    Frustum frus = gameBattle.Camera.Frustum;
+        //    Vector3 camDirection = gameBattle.Camera.Front;
+        //    Vector3 camPos = gameBattle.Camera.Position;
+
+        //    // lod范围，超出该范围由节点判断
+        //    const float lodDistanceLmt = 150;
+        //    // lod因子，在lodDistanceLmt中一定范围内的单元块会被细化。在摄像机离单元块lodDistanceLmt远时，单元块的最大lod因子。
+        //    const float lodFactorLmt = 0.4f;
+
+        //    // useState[i]表示第i个组是否被用到
+        //    bool[] useState = new bool[groupCount];
+
+
+
+        //    // BFS，遍历时检查TexturePack
+        //    queue.Enqueue(terrainTree);
+        //    while (queue.Count > 0)
+        //    {
+        //        TerrainTreeNode node = queue.Dequeue();
+
+        //        if (node.ChildrenCount != 0)
+        //        {
+        //            if (node[0] != null)
+        //            {
+        //                if (frus.IsSphereIn(ref node[0].bounding.Center, node[0].bounding.Radius))
+        //                {
+        //                    queue.Enqueue(node[0]);
+        //                }
+        //            }
+        //            if (node[1] != null)
+        //            {
+        //                if (frus.IsSphereIn(ref node[1].bounding.Center, node[1].bounding.Radius))
+        //                {
+        //                    queue.Enqueue(node[1]);
+        //                }
+        //            }
+        //            if (node[2] != null)
+        //            {
+        //                if (frus.IsSphereIn(ref node[2].bounding.Center, node[2].bounding.Radius))
+        //                {
+        //                    queue.Enqueue(node[2]);
+        //                }
+        //            }
+        //            if (node[3] != null)
+        //            {
+        //                if (frus.IsSphereIn(ref node[3].bounding.Center, node[3].bounding.Radius))
+        //                {
+        //                    queue.Enqueue(node[3]);
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            TerrainTreeNodeData[] data = node.GetData();
+        //            bool ignoreLod =
+        //                (MathEx.Sqr(node.bounding.Center.X - camPos.X) +
+        //                 MathEx.Sqr(node.bounding.Center.Y - camPos.Y) +
+        //                 MathEx.Sqr(node.bounding.Center.Z - camPos.Z)) > MathEx.Sqr(lodDistanceLmt + node.bounding.Radius);
+
+        //            for (int i = 0; i < data.Length; i++)
+        //            {
+        //                TerrainTreeNodeData current = data[i];
+
+        //                if (current.visible)
+        //                {
+        //                    if (current.texturePack != -1)
+        //                    {
+        //                        renderIdxBuffer[current.texturePack].Add(current);
+        //                    }
+        //                    else
+        //                    {
+        //                        renderIBNoTex.Add(current);
+        //                    }
+        //                    current.ignoreLod = ignoreLod;
+        //                    useState[current.groupIdx] = true;
+        //                }
+
+        //                if (current.model != null)
+        //                    tileModelBuffer.Add(current);
+
+        //            }
+        //        }
+        //    }
+
+        //    IndexStream[] streams = new IndexStream[groupCount];
+        //    IndexStream[] streams2 = new IndexStream[groupCount];
+
+        //    //device.PixelShader = terrainLightingShader;
+        //    //device.SetRenderState<Cull>(RenderState.CullMode, Cull.Counterclockwise);
+
+        //    //device.SetRenderState<FillMode>(RenderState.FillMode, FillMode.Wireframe);
+
+        //    //testAngle += MathEx.PIf / 360;
+
+        //    //terrainLight.Direction = new Vector3((float)Math.Cos(testAngle), (float)Math.Sin(testAngle), 0);
+        //    //{
+        //    //    Vector3 lightPos = terrainLight.Direction * (-terrainTree.bounding.Radius) + terrainTree.bounding.Center;
+
+        //    //    device.SetTexture(0, null);
+        //    //    device.SetTexture(1, null);
+
+        //    //    device.SetTransform(TransformState.World, Matrix.Translation(lightPos));
+        //    //    sun.DrawSubset(0);
+        //    //    device.SetTransform(TransformState.World, Matrix.Identity);
+        //    //}
+
+        //    device.SetRenderState(RenderState.Lighting, false);
+
+        //    //device.SetSamplerState(0, SamplerState.MagFilter, TextureFilter.GaussianQuad);
+        //    //device.SetSamplerState(0, SamplerState.MinFilter, TextureFilter.GaussianQuad);
+
+        //    //device.SetSamplerState(1, SamplerState.MagFilter, TextureFilter.Linear);
+
+        //    device.SetSamplerState(0, SamplerState.MagFilter, TextureFilter.Anisotropic);
+        //    device.SetSamplerState(0, SamplerState.MinFilter, TextureFilter.Anisotropic);
+        //    //device.SetSamplerState(0, SamplerState.MipFilter, TextureFilter.Anisotropic);
+
+        //    device.SetSamplerState(1, SamplerState.MagFilter, TextureFilter.Anisotropic);
+        //    device.SetSamplerState(1, SamplerState.MinFilter, TextureFilter.Anisotropic);
+        //    //device.SetSamplerState(1, SamplerState.MipFilter, TextureFilter.Anisotropic);
+        //    device.SetSamplerState(0, SamplerState.MaxAnisotropy, 4);
+        //    device.SetSamplerState(1, SamplerState.MaxAnisotropy, 4);
+
+
+        //    device.SetTextureStageState(0, TextureStage.TexCoordIndex, 0);
+        //    device.SetTextureStageState(1, TextureStage.TexCoordIndex, 1);
+
+        //    //device.SetTexture(0, normalMap);
+
+
+        //    Color4 clr = terrainLight.Ambient;
+        //    terrainLighting.SetValue(tlParamLa, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+        //    clr = terrainLight.Diffuse;
+        //    terrainLighting.SetValue(tlParamLd, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+        //    clr = terrainLight.Specular;
+        //    terrainLighting.SetValue(tlParamLs, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+
+        //    clr = BlockMaterial.DefBlockColor.Ambient;
+        //    terrainLighting.SetValue(tlParamKa, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+        //    clr = BlockMaterial.DefBlockColor.Diffuse;
+        //    terrainLighting.SetValue(tlParamKd, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+        //    clr = BlockMaterial.DefBlockColor.Specular;
+        //    terrainLighting.SetValue(tlParamKs, new float[] { clr.Red, clr.Green, clr.Blue, clr.Alpha });
+        //    terrainLighting.SetValue(tlParamPwr, BlockMaterial.DefBlockColor.Power);
+
+        //    terrainLighting.SetValue(tlParamLdir, new float[] { terrainLight.Direction.X, terrainLight.Direction.Y, terrainLight.Direction.Z });
+
+        //    terrainLighting.SetValue(tlParamVpos, new float[] { camPos.X, camPos.Y, camPos.Z });
+
+        //    //terrainLighting.SetValue(tlParamTex0, normalMap);
+
+        //    terrainLighting.SetValue(tlParamMVP, frus.view * frus.proj);
+        //    //terrainLighting.SetValue(tlParamMV, frus.view);
+
+        //    terrainLighting.Begin(FX.None);
+
+        //    terrainLighting.BeginPass(0);
+
+
+        //    for (int i = -1; i < tileTexture.Count; i++)
+        //    {
+        //        int[] vtxCount = new int[groupCount];
+        //        int[] vtxCount2 = new int[groupCount];
+
+        //        if (i == -1)
+        //        {
+        //            if (renderIBNoTex.Count == 0)
+        //                continue;
+        //        }
+        //        else
+        //        {
+        //            // oops，没有要画的cell
+        //            if (renderIdxBuffer[i].Count == 0)
+        //                continue;
+        //        }
+
+        //        for (int j = 0; j < groupCount; j++)
+        //        {
+        //            if (useState[j])
+        //            {
+        //                streams[j] = new IndexStream((ushort*)idxBuffer[j].Lock(0, ibSizes[j], LockFlags.None).DataPointer.ToPointer(), ibSizes[j]);
+
+        //                if (idxBuffer2[j] != null)                        
+        //                    streams2[j] = new IndexStream((ushort*)idxBuffer2[j].Lock(0, ibSizes2[j], LockFlags.None).DataPointer.ToPointer(), ibSizes2[j]);                        
+        //            }
+        //        }
+
+        //        if (i == -1)
+        //        {
+        //            for (int j = 0; j < renderIBNoTex.Count; j++)
+        //            {
+        //                TerrainTreeNodeData current = renderIBNoTex[j];
+
+        //                int groupIndex = current.groupIdx;
+        //                IndexStream cdst = streams[groupIndex];
+
+
+        //                if (!current.ignoreLod &&
+        //                     (current.lodFactor *
+        //                        (MathEx.Sqr(camPos.X - current.x * HorizontalUnit) +
+        //                         MathEx.Sqr(camPos.Y - current.lodHeight) +
+        //                         MathEx.Sqr(camPos.Z - current.y * HorizontalUnit))
+        //                     < (lodFactorLmt * lodFactorLmt * lodDistanceLmt * lodDistanceLmt)))
+        //                {
+        //                    // lod
+        //                    //Vector3 pos = new Vector3(current.x * HorizontalUnit, current.lodHeight, current.y * HorizontalUnit);
+        //                    //float bias = MathEx.Sqr(camPos.X - current.x * HorizontalUnit) + MathEx.Sqr(camPos.Y - current.lodHeight) + MathEx.Sqr(camPos.Z - current.y * HorizontalUnit);
+
+        //                    //if (current.lodFactor * (MathEx.Sqr(camPos.X - current.x * HorizontalUnit) + MathEx.Sqr(camPos.Y - current.lodHeight) + MathEx.Sqr(camPos.Z - current.y * HorizontalUnit)) < (lodFactorLmt * lodFactorLmt * lodDistanceLmt * lodDistanceLmt))
+        //                    //{
+        //                    vtxCount[groupIndex] += 5;
+
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+        //                    cdst.Write((ushort)(current.vbIndex));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                }
+        //                else
+        //                {
+        //                    vtxCount[groupIndex] += 4;
+
+        //                    cdst.Write((ushort)(current.vbIndex));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+
+        //                    cdst.Write((ushort)(current.vbIndex));
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                }
+        //                if (current.vbSecIndex != TerrainTreeNodeData.NoIndex)
+        //                {
+        //                    IndexStream cdst2 = streams2[groupIndex];
+
+        //                    if (!current.ignoreLod &&
+        //                        (current.lodFactor2 *
+        //                            (MathEx.Sqr(camPos.X - current.x * HorizontalUnit) +
+        //                             MathEx.Sqr(camPos.Y - current.lodHeight2) +
+        //                             MathEx.Sqr(camPos.Z - current.y * HorizontalUnit))
+        //                         < (lodFactorLmt * lodFactorLmt * lodDistanceLmt * lodDistanceLmt)))
+        //                    {
+        //                        vtxCount2[groupIndex] += 5;
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                    }
+        //                    else
+        //                    {
+        //                        vtxCount2[groupIndex] += 4;
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            for (int j = 0; j < renderIdxBuffer[i].Count; j++)
+        //            {
+        //                TerrainTreeNodeData current = renderIdxBuffer[i][j];
+
+        //                int groupIndex = current.groupIdx;
+        //                IndexStream cdst = streams[groupIndex];
+
+
+        //                if (!current.ignoreLod &&
+        //                     (current.lodFactor *
+        //                        (MathEx.Sqr(camPos.X - current.x * HorizontalUnit) +
+        //                         MathEx.Sqr(camPos.Y - current.lodHeight) +
+        //                         MathEx.Sqr(camPos.Z - current.y * HorizontalUnit))
+        //                     < (lodFactorLmt * lodFactorLmt * lodDistanceLmt * lodDistanceLmt)))
+        //                {
+        //                    vtxCount[groupIndex] += 5;
+
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+        //                    cdst.Write((ushort)(current.vbIndex));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+
+        //                    cdst.Write((ushort)(current.vbIndex + 4));
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                }
+        //                else
+        //                {
+        //                    vtxCount[groupIndex] += 4;
+
+        //                    cdst.Write((ushort)(current.vbIndex));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                    cdst.Write((ushort)(current.vbIndex + 1));
+
+        //                    cdst.Write((ushort)(current.vbIndex));
+        //                    cdst.Write((ushort)(current.vbIndex + 2));
+        //                    cdst.Write((ushort)(current.vbIndex + 3));
+        //                }
+        //                if (current.vbSecIndex != TerrainTreeNodeData.NoIndex)
+        //                {
+        //                    IndexStream cdst2 = streams2[groupIndex];
+
+        //                    if (!current.ignoreLod &&
+        //                        (current.lodFactor2 *
+        //                            (MathEx.Sqr(camPos.X - current.x * HorizontalUnit) +
+        //                             MathEx.Sqr(camPos.Y - current.lodHeight2) +
+        //                             MathEx.Sqr(camPos.Z - current.y * HorizontalUnit))
+        //                         < (lodFactorLmt * lodFactorLmt * lodDistanceLmt * lodDistanceLmt)))
+        //                    {
+        //                        vtxCount2[groupIndex] += 5;
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 4));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                    }
+        //                    else
+        //                    {
+        //                        vtxCount2[groupIndex] += 4;
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 1));
+
+        //                        cdst2.Write((ushort)(current.vbSecIndex));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 2));
+        //                        cdst2.Write((ushort)(current.vbSecIndex + 3));
+        //                    }
+        //                }
+
+        //            }
+        //        }
+
+        //        for (int j = 0; j < groupCount; j++)
+        //        {
+        //            if (useState[j])
+        //            {
+        //                idxBuffer[j].Unlock();
+        //                if (idxBuffer2[j] != null)
+        //                    idxBuffer2[j].Unlock();
+        //            }
+        //        }
+
+        //        //device.SetTexture(0, null);
+        //        //device.SetTexture(1, tileTexture.GetTileTexture(i).Texture);
+        //        terrainLighting.SetValue(tlParamTex1, tileTexture.GetTileTexture(i).Texture);
+
+        //        for (int j = 0; j < groupCount; j++)
+        //        {
+        //            if (useState[j])
+        //            {
+        //                terrainLighting.SetValue(tlParamTex0, normalMap);
+        //                terrainLighting.CommitChanges();
+
+        //                device.SetStreamSource(0, vtxBuffer[j], 0, sizeof(TerrainVertex));
+        //                device.VertexFormat = TerrainVertex.Format;
+        //                device.VertexDeclaration = vtxDecl;
+
+        //                device.Indices = idxBuffer[j];
+        //                device.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, 0, vtxCount[j], 0, streams[j].Position / 3);
+
+        //                if (idxBuffer2[j] != null)
+        //                {
+        //                    terrainLighting.SetValue(tlParamTex0, secNormalMap);
+        //                    terrainLighting.CommitChanges();
+        //                    device.SetStreamSource(0, vtxBuffer[j], 0, sizeof(TerrainVertex));
+        //                    device.VertexFormat = TerrainVertex.Format;
+        //                    device.VertexDeclaration = vtxDecl;
+
+        //                    device.Indices = idxBuffer2[j];
+        //                    device.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, 0, vtxCount2[j], 0, streams2[j].Position / 3);
+        //                }
+        //            }
+        //        }
+
+        //        //vtxCount = new int[groupCount];
+        //        //vtxCount2 = new int[groupCount];
+        //    }
+        //    terrainLighting.EndPass();
+        //    terrainLighting.End();
+
+        //    device.PixelShader = null;
+        //    device.VertexShader = null;
+        //    device.VertexDeclaration = null;
+
+        //    for (int i = 0; i < tileTexture.Count; i++)
+        //    {
+        //        renderIdxBuffer[i].Clear();
+        //    }
+
+
+        //    device.SetRenderState(RenderState.Lighting, true);
+        //    device.EnableLight(0, true);
+        //    device.SetLight(0, terrainLight);
+
+        //    for (int i = 0; i < tileModelBuffer.Count; i++)
+        //    {
+        //        //int cellIdx = tileModelBuffer[i].model;
+        //        TerrainTreeNodeData current = tileModelBuffer[i];
+        //        GameModel mdl = tileModelBuffer[i].model; //tileModels[cellData[cellIdx].tile][tileModelBuffer[i].varision][cellData[cellIdx].subTile];
+
+        //        Matrix trans;
+
+        //        Matrix.Translation(current.x * HorizontalUnit, current.lodHeight, current.y * HorizontalUnit, out trans);
+        //        device.SetTransform(TransformState.World, trans);
+        //        mdl.Render();
+        //    }
+
+        //    tileModelBuffer.Clear();
+        //}
+
+
+        //#endregion
+        //#region ISceneObject 成员
+
+        //public void GetBoundingBox(out BoundingBox box)
+        //{
+        //    box = boundingBox;
+        //}
+
+        //public void GetTransformation(out Matrix mat)
+        //{
+        //    mat = transformation;
+        //}
+
+        //public void SetTransformation(ref Matrix mat)
+        //{
+        //    transformation = mat;
+        //}
+        //#endregion
+
+        public static void SetCellVertex(ref Vector3 v1, ref Vector3 v2, ref Vector3 v3, ref Vector3 v4, ref Vector3 vc)
+        {
+            v2.Z += HorizontalUnit;
+
+            v3.X += HorizontalUnit;
+
+            v4.X += HorizontalUnit;
+            v4.Z += HorizontalUnit;
+
+            vc.X += HorizontalUnit * 0.5f;
+            vc.Z += HorizontalUnit * 0.5f;
+        }
+
+        public override void PrepareVisibleObjects(Camera cam)
+        {
+            throw new NotImplementedException();
+            tileModelBuffer.Clear();
+
+            Frustum frus = gameBattle.Camera.Frustum;
+            Vector3 camDirection = gameBattle.Camera.Front;
+            Vector3 camPos = gameBattle.Camera.Position;
+
+            // lod范围，超出该范围由节点判断
+            const float lodDistanceLmt = 150;
+            // lod因子，在lodDistanceLmt中一定范围内的单元块会被细化。在摄像机离单元块lodDistanceLmt远时，单元块的最大lod因子。
+            const float lodFactorLmt = 0.4f;
+
+            // useState[i]表示第i个组是否被用到
+            bool[] useState = new bool[groupCount];
+
+
+
+            // BFS，遍历时检查TexturePack
+            queue.Enqueue(terrainTree);
+            while (queue.Count > 0)
+            {
+                TerrainTreeNode node = queue.Dequeue();
+
+                if (node.ChildrenCount != 0)
+                {
+                    if (node[0] != null)
+                    {
+                        if (frus.IsSphereIn(ref node[0].bounding.Center, node[0].bounding.Radius))
+                        {
+                            queue.Enqueue(node[0]);
+                        }
+                    }
+                    if (node[1] != null)
+                    {
+                        if (frus.IsSphereIn(ref node[1].bounding.Center, node[1].bounding.Radius))
+                        {
+                            queue.Enqueue(node[1]);
+                        }
+                    }
+                    if (node[2] != null)
+                    {
+                        if (frus.IsSphereIn(ref node[2].bounding.Center, node[2].bounding.Radius))
+                        {
+                            queue.Enqueue(node[2]);
+                        }
+                    }
+                    if (node[3] != null)
+                    {
+                        if (frus.IsSphereIn(ref node[3].bounding.Center, node[3].bounding.Radius))
+                        {
+                            queue.Enqueue(node[3]);
+                        }
+                    }
+                }
+                else
+                {
+                    TerrainTreeNodeData[] data = node.GetData();
+                    bool ignoreLod =
+                        (MathEx.Sqr(node.bounding.Center.X - camPos.X) +
+                         MathEx.Sqr(node.bounding.Center.Y - camPos.Y) +
+                         MathEx.Sqr(node.bounding.Center.Z - camPos.Z)) > MathEx.Sqr(lodDistanceLmt + node.bounding.Radius);
+
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        TerrainTreeNodeData current = data[i];
+
+                        if (current.visible)
+                        {
+                            if (current.texturePack != -1)
+                            {
+                                renderIdxBuffer[current.texturePack].Add(current);
+                            }
+                            else
+                            {
+                                renderIBNoTex.Add(current);
+                            }
+                            current.ignoreLod = ignoreLod;
+                            useState[current.groupIdx] = true;
+                        }
+
+                        if (current.model != null)
+                            tileModelBuffer.Add(current);
+
+                    }
+                }
+            }
+
+
+            IndexStream[] streams = new IndexStream[groupCount];
+            IndexStream[] streams2 = new IndexStream[groupCount];
+
+        }
+        public override RenderOperation[] GetRenderOperation()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+}
