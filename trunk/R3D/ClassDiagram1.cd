@@ -1,0 +1,2963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Ra2Reload.ScriptException" Collapsed="true">
+    <Position X="2.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.InvalidScriptException" Collapsed="true">
+    <Position X="1.25" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptSecurityException" Collapsed="true">
+    <Position X="3.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptArgumentException" Collapsed="true">
+    <Position X="5.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ObjectAlreadyLoadedException" Collapsed="true">
+    <Position X="10.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ObjectNotInitializedException" Collapsed="true">
+    <Position X="12.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.DataFormatException" Collapsed="true">
+    <Position X="8" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ExternalModule" Collapsed="true">
+    <Position X="2" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExternalModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.FpsCounter" Collapsed="true">
+    <Position X="66.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAAAAAAAAEhAAAAABTAAAAAIEAAEACAAAAAAA=</HashCode>
+      <FileName>FpsCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Game" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Eg4pAgFEBDQEAsEQBEQQgAACEEiJAEEI4iAhDAEAIAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.GameConsole" Collapsed="true">
+    <Position X="54.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgCEUAAACAAgIAQAACBCAAyAYAIgAAAQUAQAQEAACA=</HashCode>
+      <FileName>GameConsole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameTimer" Collapsed="true">
+    <Position X="59.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwQgAAAEACACAAAIAAByAAAAAAgAAAAAAAQAAAAAAQA=</HashCode>
+      <FileName>GameTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.InternalErrorDlg" Collapsed="true">
+    <Position X="59.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAIAAAAAEAAAAAAACA=</HashCode>
+      <FileName>InternalErrorDlg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Memory" Collapsed="true">
+    <Position X="61.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Memory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Player" Collapsed="true">
+    <Position X="28" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAhAAAAAAQAAAgEAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ComputerPlayer" Collapsed="true">
+    <Position X="26.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.HumanPlayer" Collapsed="true">
+    <Position X="29" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ResourceAssembly" Collapsed="true">
+    <Position X="3" Y="34" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwCihAEQACogBcogAARFBAAQAYgIsQwAQAQqIQAIiBQ=</HashCode>
+      <FileName>ResourceAssembly.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.TestOnlyAttribute" Collapsed="true">
+    <Position X="16" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.CaseInsensitiveStringComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAIAAQABAAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Utils" Collapsed="true">
+    <Position X="68.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAAAAAAAACAAAAAAIAAAAYAAAAAAAAACAAAAABAQ=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.AI.PathFinderResult" Collapsed="true">
+    <Position X="70.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAICAAAAAAQEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.AI.AStarNode" Collapsed="true">
+    <Position X="63.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAIAYQAAAIAAAYAE=</HashCode>
+      <FileName>AI\PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.AI.PathFinderManager" Collapsed="true">
+    <Position X="68.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAABAAAEAAAAAAAAEACAAAQAAAAAAAAAABAACA=</HashCode>
+      <FileName>AI\PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.AI.PathFinder" Collapsed="true">
+    <Position X="66.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIQDAAAAAAABAQIRABAAAACAgAQAIAAAEAAAABAAKg=</HashCode>
+      <FileName>AI\PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.Configuration" Collapsed="true">
+    <Position X="19.75" Y="34.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAQAAAAAAAAAAABA=</HashCode>
+      <FileName>ConfigModel\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.ConfigurationFormat" Collapsed="true">
+    <Position X="17" Y="34.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\ConfigurationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.ConfigurationManager" Collapsed="true">
+    <Position X="68.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAEAAAAAAAAAAAAQABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\ConfigurationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.ConfigurationSection" Collapsed="true">
+    <Position X="34.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACQIAEAICIAAACAAABARARQAAAAAABAABAAADCggBA=</HashCode>
+      <FileName>ConfigModel\ConfigurationSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.GameConfigs" Collapsed="true">
+    <Position X="52.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAAAAQAAAAAAAAAAQQAAAIAAQAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\GameConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.IniConfiguration" Collapsed="true">
+    <Position X="19.75" Y="36.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAAAAAQApAAAEAgAAAAAAQAAAAAAAAAAABA=</HashCode>
+      <FileName>ConfigModel\IniConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.ConfigurationIniFormat" Collapsed="true">
+    <Position X="16.75" Y="36" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\IniConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.IniSection" Collapsed="true">
+    <Position X="34.75" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACQIAEAICIAAgCEAAJARABQAAgAAABAgBAAADCggBA=</HashCode>
+      <FileName>ConfigModel\IniSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.FactoryAttribute" Collapsed="true">
+    <Position X="18.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Abstraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.AbstractFactoryManager" Collapsed="true">
+    <Position X="52.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Abstraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.Camera" Collapsed="true">
+    <Position X="23" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQOAQEAQAAEAAgIkAhAgSQAAIIgQACAASAAAgAACA=</HashCode>
+      <FileName>Core\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.RtsCamera" Collapsed="true">
+    <Position X="21.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQgIAAQBAACAAQAAAIhAAAQAAAAAEAIQAABAAEIAQA=</HashCode>
+      <FileName>Core\Camera.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Core.FpsCamera" Collapsed="true">
+    <Position X="24" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAQAAACBBAAAAIAAAACEAAAAEAIQAAAAAAJIAE=</HashCode>
+      <FileName>Core\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.FastList&lt;T&gt;" Collapsed="true">
+    <Position X="63.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAAECEAQAAQAAAAAAAEAAAAAAAFAAAA=</HashCode>
+      <FileName>Core\FastList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.ImageQuadTreeNode" Collapsed="true">
+    <Position X="52.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAABAgABBRACAAAAEgEAAAYQAAACAAAAAwAgAA=</HashCode>
+      <FileName>Core\ImageQuadTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.Node&lt;NodeType&gt;" Collapsed="true">
+    <Position X="58" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.QuadTreeNode" Collapsed="true">
+    <Position X="58" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAQEAgAAAQACAAAAAAAAAAQQAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\QuadTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.SceneManager" Collapsed="true">
+    <Position X="29.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEAAAAAAAgAAAAAAAAAAAAAAAAIAEAAQAAAA=</HashCode>
+      <FileName>Core\SceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.SceneNode" Collapsed="true">
+    <Position X="0.75" Y="31" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAARAAAAAAAAABAAARAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SceneNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.SceneObject" Collapsed="true">
+    <Position X="27.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAABAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Core\SceneObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Core.ShadowMap" Collapsed="true">
+    <Position X="70.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACIACBAAAAAQYQACEAAAAEAAAEABAAAAgBAQAQAA=</HashCode>
+      <FileName>Core\ShadowMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Crypto.Crc" Collapsed="true">
+    <Position X="54.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAABAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAA=</HashCode>
+      <FileName>Crypto\Crc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Design.ArrayConverter&lt;ItemEditorType, ItemType&gt;" Collapsed="true">
+    <Position X="61.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Design\ArrayConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Design.MatrixEditControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgBBAQAACAAAACAAAIQCAQAEAgAAAAACI=</HashCode>
+      <FileName>Design\MatrixEditControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Design.MatrixEditor" Collapsed="true">
+    <Position X="59.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEABAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Design\MatrixEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Design.MeshFaceConverter" Collapsed="true">
+    <Position X="68.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAAAAAAAgAAAAACAAAAIAAAAAAAA=</HashCode>
+      <FileName>Design\MeshFaceConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.CachedObject" Collapsed="true">
+    <Position X="28.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIIAgCCAAIAAAASAAAgAAAAAAAAEAACACAAAhAoAAAg=</HashCode>
+      <FileName>GameResource\CachedObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GameResource.CachedObjectManager&lt;T&gt;" Collapsed="true">
+    <Position X="0.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAgIAAAAAABEABgAAAAAQAAAAAAAAAAAAAASAA=</HashCode>
+      <FileName>GameResource\CachedObjectManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GameResource.ObjectTracker&lt;T&gt;" Collapsed="true">
+    <Position X="33" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAECAAABAAAAAAABAAAAAAAQ=</HashCode>
+      <FileName>GameResource\ObjectTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.Resource" Collapsed="true">
+    <Position X="31.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIACAAAAAiAAAAAgQAAAAEAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.ResourceManager&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAABAAgAAAAIAABkIBgAEEAAQAAAAAAAABAgAEASAA=</HashCode>
+      <FileName>GameResource\ResourceManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.GameResource.StringTable" Collapsed="true">
+    <Position X="65" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\StringTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.StringTableFormat" Collapsed="true">
+    <Position X="6" Y="34.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GameResource\StringTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.StringTableCsfFormat" Collapsed="true">
+    <Position X="5.75" Y="36" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GameResource\StringTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.StringTableManager" Collapsed="true">
+    <Position X="66.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAEABAAAAAAAAAAAABAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>GameResource\StringTableManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GameResource.UniqueObject" Collapsed="true">
+    <Position X="12.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIACAAAAAiAAAAAgQAAAAEAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\UniqueObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GameResource.UniqueObjectManager&lt;S, T&gt;" Collapsed="true">
+    <Position X="18" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAIAAAEIAAAEAAAAAAAAAAAABQAAEAAAA=</HashCode>
+      <FileName>GameResource\UniqueObjectManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Animating.Animation" Collapsed="true">
+    <Position X="34.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAACACQBAAAgAABAAAAAAAQkAAAAAAAAAIAAAQA=</HashCode>
+      <FileName>GraphicsEngine\Animating\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Animating.NoAnimation" Collapsed="true">
+    <Position X="34.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAQgAABAAAAAAgAgABIAAAAAAIAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Animating\NoAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Atmosphere" Collapsed="true">
+    <Position X="65" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAACAAAAAAAQhBgAFgQAAAJAAAAAQBgAFAABgAA=</HashCode>
+      <FileName>GraphicsEngine\Atmosphere.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.HeightMap" Collapsed="true">
+    <Position X="65" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAABAAAAAQASAAAAGAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\HeightMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.GameMeshDataBase&lt;MType&gt;" Collapsed="true">
+    <Position X="58" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAgYAyEAEAABEoBAAB6EWAAEgEAAAAAAAEAANAECA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.GameMesh" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="56.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIQAAAAACACAAgAAgACggQEABgEIAAAAAJAAARgAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.MaterialBase" Collapsed="true">
+    <Position X="13.75" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAEAAQBAAAAAIgAAAAIAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\MeshMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.MeshMaterialBase&lt;TexType&gt;" Collapsed="true">
+    <Position X="13.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJMFACCAGgFAAAAARACAAAEACAgAAAQAAAABIAAAgQ=</HashCode>
+      <FileName>GraphicsEngine\MeshMaterial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.MeshMaterial" Collapsed="true">
+    <Position X="13.75" Y="34.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAACAQAEAAQAAAAgAAAAAAAAAAAACAAAAIAAAgA=</HashCode>
+      <FileName>GraphicsEngine\MeshMaterial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.MeshSimplifier" Collapsed="true">
+    <Position X="70.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAERAAAAEAAAIEAQAAAAAQACAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\MeshSimplifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.GameModelBase&lt;MeshType&gt;" Collapsed="true">
+    <Position X="34.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACAAAAAABAgAAABAAgIAECAAgAwAAAAEAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.GameModel" Collapsed="true">
+    <Position X="34.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAACAAAACAAAAAAAgAAAAAEAAAAIgAEKAAAAAACAAA=</HashCode>
+      <FileName>GraphicsEngine\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.GeomentryData" Collapsed="true">
+    <Position X="63.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAAAAgAAAAAAAAAAEAEAAAgAAAABAAAAAAAMEAA=</HashCode>
+      <FileName>GraphicsEngine\RenderOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.SkyBox" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="56.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgCAACQCBAAAAIAgAAAgAAABAAAAAAABAAAAAAAAQ=</HashCode>
+      <FileName>GraphicsEngine\SkyBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Terrain" Collapsed="true">
+    <Position X="22.25" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAMAIgADATAgDCQQQgBAEAAEQgUIFABABCAiAZJkAAA=</HashCode>
+      <FileName>GraphicsEngine\Terrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.IndexStream32" Collapsed="true">
+    <Position X="56.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAEAAIABAAAAACAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GraphicsEngine\TerrainTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.TerrainTreeNodeData" Collapsed="true">
+    <Position X="52.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAQAAAAgIAAQAAAAAQgAAAAAQAAABgCAgIQAA=</HashCode>
+      <FileName>GraphicsEngine\TerrainTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.TerrainTreeNode" Collapsed="true">
+    <Position X="70.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAEAAAAAQACAAAAABQEAAAUAAAAAAQAAAAQAA=</HashCode>
+      <FileName>GraphicsEngine\TerrainTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.TextureManager" Collapsed="true">
+    <Position X="31.75" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAAACAABAAQAAAAQAAEAAAQAAAAAAQAhAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\TextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.TileTexturePack" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIQCAACBCAAIAQAQAAAAEAEAAAAAwAAAAIAAABAAAg=</HashCode>
+      <FileName>GraphicsEngine\TileTexturePack.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.TileTexturePackManager" Collapsed="true">
+    <Position X="61.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAwCAACAEAAAAAACAAAAAQCABAAAQAAAAEQAABQAEg=</HashCode>
+      <FileName>GraphicsEngine\TileTexturePackManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.ModelEffectFactory" Collapsed="true">
+    <Position X="19.25" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.PostEffectFactory" Collapsed="true">
+    <Position X="56.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.EffectBase" Collapsed="true">
+    <Position X="28.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.ModelEffect" Collapsed="true">
+    <Position X="27.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoAAAACCAAAAAEAAAAAAAERAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.PostEffect" Collapsed="true">
+    <Position X="31.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.EffectManager" Collapsed="true">
+    <Position X="61.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAQAAAAAAAIiAAACAIAAAAQAAAcAAVICAAABAIBA=</HashCode>
+      <FileName>GraphicsEngine\Effects\EffectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.NormalMappingEffectFactory" Collapsed="true">
+    <Position X="17" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAAAAAACAAAAQAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\NormalMappingEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.NormalMappingEffect" Collapsed="true">
+    <Position X="27.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkACAAGKSAAAAEAQAEAAAEQCAkAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\NormalMappingEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.StandardEffectFactory" Collapsed="true">
+    <Position X="19.25" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAAAAAACAAAAQAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\StandardEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.StandardEffect" Collapsed="true">
+    <Position X="29.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACGAGCSiAAAEAQAEAAAEQCAkAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\StandardEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.TerrainLightingEffectFactory" Collapsed="true">
+    <Position X="21.5" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAACAAgAQAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\TerrainLightingEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.Effects.TerrainLightingEffect" Collapsed="true">
+    <Position X="25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACEQGKSCBBAEAQAIAAIEQCAkABAoAAQDAKAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\TerrainLightingEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.ParticleSystem.ParticleEmitter" Collapsed="true">
+    <Position X="63.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\ParticleSystem\ParticleEmitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.ParticleSystem.ParticleModifier" Collapsed="true">
+    <Position X="65" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\ParticleSystem\ParticleModifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.Archive" Collapsed="true">
+    <Position X="10.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAACAAAAAAAABAAAIAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>IO\Archive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.ArchiveBinaryReader" Collapsed="true">
+    <Position X="54.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABAAAAIAAAAAAAAAAAAAAABAAAEAACAAAA=</HashCode>
+      <FileName>IO\ArchiveBinary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.ArchiveBinaryWriter" Collapsed="true">
+    <Position X="56.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IO\ArchiveBinary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.VirtualStream" Collapsed="true">
+    <Position X="52.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAAAQAQAAgGEAAAABgAAAAAAAgCEAAAAGJACA=</HashCode>
+      <FileName>IO\ArchiveBinary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.ArchiveStreamReader" Collapsed="true">
+    <Position X="58" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ArchiveText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.ArchiveStreamWriter" Collapsed="true">
+    <Position X="59.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ArchiveText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.BinaryDataReader" Collapsed="true">
+    <Position X="58" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAMKgAIgEAAAAAIAAIgAAAAAAACABAAACAAAU=</HashCode>
+      <FileName>IO\BinaryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.BinaryDataWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgIABECAAAAAAAAAAIAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>IO\BinaryData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IO.FileSystem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>xCYaMWEEACAyAAAAAAEBMAiBgTAykgMgUkIKEQxOBAI=</HashCode>
+      <FileName>IO\FileSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IO.MemoryStream" Collapsed="true">
+    <Position X="63.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAgGEAAIABgAAAAAAAAAAAQAAEIACA=</HashCode>
+      <FileName>IO\Memory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.MemoryLocation" Collapsed="true">
+    <Position X="13.5" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>IO\Memory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.MixArchive" Collapsed="true">
+    <Position X="10.75" Y="34.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAQAACCACAAAAAAAAAQhAAAIASAEAAIIAAABQIA=</HashCode>
+      <FileName>IO\MixArchive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.MixArchiveFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IO\MixArchiveFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IO.Ra2ReloadFile" Collapsed="true">
+    <Position X="10.75" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEIAAABCAAAAAAAAAAAAAEAAAEBAAABAAAA=</HashCode>
+      <FileName>IO\Ra2ReloadFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.ResourceLocation" Collapsed="true">
+    <Position X="11.25" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAUAIAAIAQAAAAEAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ResourceLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.FileLocation" Collapsed="true">
+    <Position X="9" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAIAAAJQAAACIAAAAAAAAAAAAAAAAAAAggA=</HashCode>
+      <FileName>IO\ResourceLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.StreamedLocation" Collapsed="true">
+    <Position X="11.25" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>IO\ResourceLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IO.SpecialFiles" Collapsed="true">
+    <Position X="59.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\SpecialFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Map" Collapsed="true">
+    <Position X="5.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACCgAAAIgAAAAgAAAIAAgACAABAECCEgAAAAAACgBA=</HashCode>
+      <FileName>IsoMap\Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Map3D" Collapsed="true">
+    <Position X="8" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACCgAAAIgAAAAgAAAggAkACAAJAECCEgAAAAAACgBA=</HashCode>
+      <FileName>IsoMap\Map3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Map3DFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAIAQEAAAAAAAAAAAABAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Map3DFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapBase" Collapsed="true">
+    <Position X="7" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAgAEAJgAAAAwAQAAAAkAAAABAACAAgAAAAAACABA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAIAQEAAAAAAAAAAAABAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\MapFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapManager" Collapsed="true">
+    <Position X="54.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAIAQAAABAAAAAAAAAQAAAAAAQAAAAIAAAAA=</HashCode>
+      <FileName>IsoMap\MapManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Theater" Collapsed="true">
+    <Position X="30.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggAAAQAAAAAAIIAAAAAAAAAEAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Theater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Theater3D" Collapsed="true">
+    <Position X="33" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggAACQgAAAAAIAAAAAAAAAAEAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Theater3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.ExtendedTileSet" Collapsed="true">
+    <Position X="31.75" Y="34" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.TileSet" Collapsed="true">
+    <Position X="31.75" Y="32.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggAAAAgAAAAAAASAABAAQAAgQAAAIEAECBAABBAAA=</HashCode>
+      <FileName>IsoMap\TheaterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.TheaterBase" Collapsed="true">
+    <Position X="32" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgCAAAAiIAAAAACAAAAAQAAg0EAAIQAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.TheaterFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="56.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Theater3DFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAgAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.TheaterManager" Collapsed="true">
+    <Position X="58" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFAAAAAAQAAAAAAAAAAAAAQAAAAAAQAAEAQAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Tile" Collapsed="true">
+    <Position X="29.75" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAEABQYBCISAIAAGAIAAihQAAAAAAAFUAAAAEAABAg=</HashCode>
+      <FileName>IsoMap\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.BlockMaterialBase&lt;TexType&gt;" Collapsed="true">
+    <Position X="30.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAECAAAEAgFAAAAABAGAAAUAAAgAgCAAAIQAAAAABA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.BlockMaterial" Collapsed="true">
+    <Position X="30.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIEAAAAACAEAAAAAAAAAAAAEAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.BlockBase&lt;MType, MdlType&gt;" Collapsed="true">
+    <Position X="21.75" Y="25.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAYAUAQAAAAEIAgAAAEIAEQAxgEAAIAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Block" Collapsed="true">
+    <Position X="21.75" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Tile3DBase&lt;BlockType, MaterialType, ModelType&gt;" Collapsed="true">
+    <Position X="32" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAQAAAAIBAAAACAAIggDQAAAAIAAAAAAAAAAgBAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.Tile3D" Collapsed="true">
+    <Position X="32" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQIAAAAAAiIAAAAACAAIggDQAAAAIAAEAAIAABAgAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.TileBase" Collapsed="true">
+    <Position X="31" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QSAAAAAABiICAAAACAAAAgRQAAAEAAAAAEIAABBAAAA=</HashCode>
+      <FileName>IsoMap\TileBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.Aircraft" Collapsed="true">
+    <Position X="26.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Aircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.AircraftType" Collapsed="true">
+    <Position X="36.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\AircraftType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.BattleSettings" Collapsed="true">
+    <Position X="56.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAIAABACAAAAAAAAAAAIABAACAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Battle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Battle" Collapsed="true">
+    <Position X="52.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASC0AACAoAAAmAIAABECAAEUQCAAAAIIAAAABIAAAA=</HashCode>
+      <FileName>Logic\Battle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.BattleField" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADQAgAAACgQIABQkgAQBgQQEAkAABgAAABCAgBRAEAQ=</HashCode>
+      <FileName>Logic\BattleField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Building" Collapsed="true">
+    <Position X="29" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Building.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.BuildingType" Collapsed="true">
+    <Position X="39" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgBAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\BuildingType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.BulletType" Collapsed="true">
+    <Position X="50.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\BulletType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Entity" Collapsed="true">
+    <Position X="29" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAgAAAIQAAAAAgAAAEAAAEAAAAAQAAAAQIAAAAABA=</HashCode>
+      <FileName>Logic\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Infantry" Collapsed="true">
+    <Position X="31.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Infantry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.InfantryType" Collapsed="true">
+    <Position X="41.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\InfantryType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Locomotion" Collapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAACAAIAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.DriveLocomotion" Collapsed="true">
+    <Position X="19.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAgAAQAAAAAAAAAAAAAAAAQQAAAAAEAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.FlyLocomotion" Collapsed="true">
+    <Position X="1.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.HoverLocomotion" Collapsed="true">
+    <Position X="6.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.JumpjetLocomotion" Collapsed="true">
+    <Position X="10.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.MechLocomotion" Collapsed="true">
+    <Position X="15.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.RocketLocomotion" Collapsed="true">
+    <Position X="22" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.ShipLocomotion" Collapsed="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TeleportLocomotion" Collapsed="true">
+    <Position X="8.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.WalkLocomotion" Collapsed="true">
+    <Position X="13" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TunnelLocomotion" Collapsed="true">
+    <Position X="17.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Locomotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.LocomotionDescription" Collapsed="true">
+    <Position X="11.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAACAgAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.FlyLocomotionDescription" Collapsed="true">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.HoverLocomotionDescription" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.JumpjetLocomotionDescription" Collapsed="true">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.MechLocomotionDescription" Collapsed="true">
+    <Position X="15.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.RocketLocomotionDescription" Collapsed="true">
+    <Position X="19.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.ShipLocomotionDescription" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TeleportLocomotionDescription" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.WalkLocomotionDescription" Collapsed="true">
+    <Position X="13" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TunnelLocomotionDescription" Collapsed="true">
+    <Position X="17.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.DriverLocomotionDescription" Collapsed="true">
+    <Position X="22" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABAAAAAAAAAAAABAAAAAgAAAAACAAAABAA=</HashCode>
+      <FileName>Logic\LocomotionDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.LocomotionFactory" Collapsed="true">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.DriveLocomotionFactory" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.FlyLocomotionFactory" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.HoverLocomotionFactory" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.JumpjetLocomotionFactory" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.MechLocomotionFactory" Collapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.RocketLocomotionFactory" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.ShipLocomotionFactory" Collapsed="true">
+    <Position X="15.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TeleportLocomotionFactory" Collapsed="true">
+    <Position X="17.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TunnelLocomotionFactory" Collapsed="true">
+    <Position X="19.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.WalkLocomotionFactory" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.LocomotionManager" Collapsed="true">
+    <Position X="66.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAQEAAAAAAAAQAAAAAIAAAAAAAACABAAAA=</HashCode>
+      <FileName>Logic\LocomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.ObjectType" Collapsed="true">
+    <Position X="40.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAA=</HashCode>
+      <FileName>Logic\ObjectType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.NamedObjectType" Collapsed="true">
+    <Position X="41.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEAAAAIAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Logic\ObjectType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.EntityType" Collapsed="true">
+    <Position X="39" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAQAAAAAAAAAAAAAAgABAAAAAgAAAAAgAA=</HashCode>
+      <FileName>Logic\ObjectType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.SideType" Collapsed="true">
+    <Position X="45.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAgEAAAAAAAABAAAAAIA=</HashCode>
+      <FileName>Logic\Side&amp;House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.HouseType" Collapsed="true">
+    <Position X="48" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>xUchTAAMAyAAgIAEgIAAAACAAAEBTARAUgACgAAECCA=</HashCode>
+      <FileName>Logic\Side&amp;House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.House" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CSAgAAAAAAAAAgAAmAARAAAAABIAAAAAAACAAAAAAgA=</HashCode>
+      <FileName>Logic\Side&amp;House.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.SpeedType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgASAAAAEAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\SpeedType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.Techno" Collapsed="true">
+    <Position X="27.75" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQADAAAAIAAkAAAAABAAAAABAAgAgAEAQAkAAAAYAU=</HashCode>
+      <FileName>Logic\Techno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TechnoType" Collapsed="true">
+    <Position X="38" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQghgCADBIAhgEERAAQSBABgAhQJAAEAAFAAQCASJA=</HashCode>
+      <FileName>Logic\TechnoType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.Unit" Collapsed="true">
+    <Position X="24.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.UnitType" Collapsed="true">
+    <Position X="34.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.WarheadType" Collapsed="true">
+    <Position X="30" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\WarheadType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.WeaponType" Collapsed="true">
+    <Position X="32.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\WeaponType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.MathLib.Frustum" Collapsed="true">
+    <Position X="68.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAIAAAAAAAAAAAAABAgAAAQAAAgAQBAA=</HashCode>
+      <FileName>MathLib\Frustum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.MathLib.MathEx" Collapsed="true">
+    <Position X="56.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIEAABCEIAIAAAQgEAEAAACAAAAEBIAWAAAIGAAAA=</HashCode>
+      <FileName>MathLib\MathEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.AnimBase" Collapsed="true">
+    <Position X="7.25" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAQAQAAAAEARAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\AnimBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.AnimManager" Collapsed="true">
+    <Position X="16.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAIAQAAQEAAAAAAAAEAAAQAAAAAAQABAAAAAAAA=</HashCode>
+      <FileName>Media\AnimManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.BmpImage" Collapsed="true">
+    <Position X="16.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Media\BmpImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.BmpImageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\BmpImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Media.DevIlImage" Collapsed="true">
+    <Position X="15" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACEAAAQgAgAAAAAAAACAACAAAAAEAAABAAAAA=</HashCode>
+      <FileName>Media\DevIlImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Media.HVA" Collapsed="true">
+    <Position X="70.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAQAAAAAIAAAAAhAAAABAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Media\HVA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.ImageBase" Collapsed="true">
+    <Position X="14" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACFAAQQAQAwAAACGAAAAAiAAAAAQAAEAAAAAA=</HashCode>
+      <FileName>Media\ImageBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.ImageManager" Collapsed="true">
+    <Position X="19" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAIAQAAQEAAAABAAAEAAAQAAAAAAQEBAAAAAAAA=</HashCode>
+      <FileName>Media\ImageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.JpegImage" Collapsed="true">
+    <Position X="11.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Media\JpegImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.JpegImageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\JpegImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Media.Palette" Collapsed="true">
+    <Position X="59.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIhCEAAAQAAAAAAA=</HashCode>
+      <FileName>Media\Palette.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.PngImage" Collapsed="true">
+    <Position X="14" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Media\PngImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.PngImageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\PngImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Media.RawImage" Collapsed="true">
+    <Position X="9.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACEAAAQAAkAAAAAAAAAAACAAQAAQAQgAQAAAA=</HashCode>
+      <FileName>Media\RawImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.ShpAnim" Collapsed="true">
+    <Position X="7.25" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIgAACAAAAAAAgAAAAACAQAAAAAAAEACACAQAAAAA=</HashCode>
+      <FileName>Media\ShpAnim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.ShpAnimFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\ShpAnim.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Media.VideoBase" Collapsed="true">
+    <Position X="24.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAgAhAAABAQAQAAAAEABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\VideoBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.AviVideoFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\VideoBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Media.AviVideo" Collapsed="true">
+    <Position X="24.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Media\VideoBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.VideoManager" Collapsed="true">
+    <Position X="70.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAACIAQAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Media\VideoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.Voxel" Collapsed="true">
+    <Position X="54.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Media\Voxel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.VoxelSection" Collapsed="true">
+    <Position X="56.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAAAAAAABAAABAAAQAAAAAABAIAAAQBAAAAAA=</HashCode>
+      <FileName>Media\VoxelSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Properties.Resources" Collapsed="true">
+    <Position X="63.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Properties.Settings" Collapsed="true">
+    <Position X="68.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ConsoleCmdIntepreter" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScriptEngine\ConsoleCmdIntepreter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptableObject" Collapsed="true">
+    <Position X="26.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAgAAAACAAAAAMDAAAIAQCAADAAAAAACAAQAACAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptableUI" Collapsed="true">
+    <Position X="16.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIiADAAIQCQAAECgAgBAIAJQABAA0AAAIoAAAAGKAAg=</HashCode>
+      <FileName>ScriptEngine\ScriptableUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptAssembly" Collapsed="true">
+    <Position X="0.75" Y="34" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAgAAAACAAAAAACAAAIAAAAAAAAAAAAACiAAIAACE=</HashCode>
+      <FileName>ScriptEngine\ScriptAssembly.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptEventAttribute" Collapsed="true">
+    <Position X="22.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ProtectedAssemblyAttribute" Collapsed="true">
+    <Position X="25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptBindingAttribute" Collapsed="true">
+    <Position X="20.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptManager" Collapsed="true">
+    <Position X="65" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAQAACBAAIAAAAQAAAAAAQAAAAAIAACE=</HashCode>
+      <FileName>ScriptEngine\ScriptManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.ScriptProc" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgACAIIDAEAAAgAAQAAgAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ScriptEngine\ScriptProc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Sound.AudioBag" Collapsed="true">
+    <Position X="66.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAQAAABAAAAAAAAAAAAAAAABAEAAAQAAAAAAA=</HashCode>
+      <FileName>Sound\AudioBag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.DummySound" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAIAAAACAAAAAAAAAAQAAAAAAxAAAAAAAAAA=</HashCode>
+      <FileName>Sound\DummySound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.EvaVoice" Collapsed="true">
+    <Position X="27.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAIAAAACAAAAAAAAAAAAAAAAAhAAAAAAAAAA=</HashCode>
+      <FileName>Sound\EvaVoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.Sfx" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAACAAAIEAAACAAIIAAAAAEAAEBAABhAAACAIBAAA=</HashCode>
+      <FileName>Sound\Sfx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.SoundBase" Collapsed="true">
+    <Position X="27.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAMACQADAAkAAAACQQAKAkBAAAAhQIAAAACAgA=</HashCode>
+      <FileName>Sound\SoundBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.SoundManager" Collapsed="true">
+    <Position X="0.75" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAgAAAACAAAAAAAAAAAAIAAEAAQAAgAAAA=</HashCode>
+      <FileName>Sound\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Sound.SoundsFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAQEIAEAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Sound\SoundsFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Sound.Themes" Collapsed="true">
+    <Position X="3" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAABQQAAAAAAAAAAIAIAAoAAAAAJABAA=</HashCode>
+      <FileName>Sound\Themes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.019" />
+  </Class>
+  <Class Name="Ra2Reload.UI.BattleUI" Collapsed="true">
+    <Position X="24.75" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAVCicaWYibJsAIABBJmBAgAmQmRgSAwYgAEEAdIABI=</HashCode>
+      <FileName>UI\BattleUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.GameUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAaAgAAAACAIkgAAAAQggAgAARIIgAAYAAAEAAYAAAI=</HashCode>
+      <FileName>UI\GameUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.UI.LanguageParser" Collapsed="true">
+    <Position X="63.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>UI\LanguageParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.LoadScreen" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgYAAAAAACCAAAQAAAAQAQAAAAAAgBAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\LoadScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.UI.Menu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qASA6C6QRCAQAAAYWAAACCiAiSBJEwHUSQUCAA6CgCA=</HashCode>
+      <FileName>UI\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.MenuPage" Collapsed="true">
+    <Position X="5.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABAAIAAAAAAAAAAAAAIAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>UI\MenuPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.UI.MenuPageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\MenuPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.UI.MenuPageBase" Collapsed="true">
+    <Position X="5.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQBIAAIACAABAAIKAAAAAgAABAAAAAAFYIAAACQAAA=</HashCode>
+      <FileName>UI\MenuPageBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.MenuPanel" Collapsed="true">
+    <Position X="7.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQhABIAACAAAAAIAAAAAggAAAAQAAAAGAAAIAAAAAA=</HashCode>
+      <FileName>UI\MenuPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.MenuSounds" Collapsed="true">
+    <Position X="66.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAABgAAAAAAEAAJkQCAKBEAgCAAABABAAA=</HashCode>
+      <FileName>UI\MenuSounds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.UITexAnim" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKIAAAChCAAAgQgyCAAAEQAAAAggBAAIAAQAAAAAgA=</HashCode>
+      <FileName>UI\UITexAnim.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Attribute" Collapsed="true">
+    <Position X="20.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Exception" Collapsed="true">
+    <Position X="6.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.Control" Collapsed="true">
+    <Position X="16.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAQwAaAMRCEggsCICALAQEgAIxAAACgVoEcAAAZDdgw=</HashCode>
+      <FileName>UI\Controls\Control.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.Randomizer" Collapsed="true">
+    <Position X="59.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Randomizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.OctreeSceneManager" Collapsed="true">
+    <Position X="32" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAJAAAAAAAAAABAAAAQAAAAAAAAAIAEAAQAAAA=</HashCode>
+      <FileName>Core\OctreeSceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.OctreeSceneNode" Collapsed="true">
+    <Position X="3" Y="31" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAAAgAABAKAAAAgAABAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\OctreeSceneNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.SceneManagerBase" Collapsed="true">
+    <Position X="31" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAABgLAAAAQkIAAQEgEAEEBBAAAEQAIIAECEQCAAA=</HashCode>
+      <FileName>Core\SceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Core.SceneNodeBase" Collapsed="true">
+    <Position X="2" Y="29.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\SceneNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.ModelManager" Collapsed="true">
+    <Position X="34" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAgEAAAQAAAAAAQABABAAAAAI=</HashCode>
+      <FileName>GraphicsEngine\ModelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.GraphicsEngine.IndexStream16" Collapsed="true">
+    <Position X="54.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAEAAIABAAAAACAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GraphicsEngine\TerrainTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapLocationInfo" Collapsed="true">
+    <Position X="52.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Map3DFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapInfo" Collapsed="true">
+    <Position X="13.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.IsoMap.MapInfoBase" Collapsed="true">
+    <Position X="13.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQQAAABAAAAAQAQAgAAEAAAABEAACAAgBIAAAACAA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.CameraSetting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Battle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.TerrainObjectType" Collapsed="true">
+    <Position X="43.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgBAEAAAAAAABAAAAAAAAAgABAAAAAAAAAAAQIAAA=</HashCode>
+      <FileName>Logic\ObjectType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.TerrainObject" Collapsed="true">
+    <Position X="33.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\ObjectType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Logic.UnitStateParams" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABgAAAAEAAAQAAABAAAAAAAAgAACAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Logic\Techno.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Logic.CameoInfo" Collapsed="true">
+    <Position X="63.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhEAAAAAAAAAAAQAAIACAAAAAAABQAAA=</HashCode>
+      <FileName>Logic\TechnoType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.MathLib.TerrainPicker" Collapsed="true">
+    <Position X="68.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAABAACAAAEQAgEAAAAAAAAIAAAFAAAAAA=</HashCode>
+      <FileName>MathLib\TerrainPicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.PaletteCache" Collapsed="true">
+    <Position X="61.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAEABAIAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\PaletteCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.PcxImage" Collapsed="true">
+    <Position X="18.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAA=</HashCode>
+      <FileName>Media\PcxImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.Media.PcxImageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Media\PcxImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.ScriptEngine.SRuntime" Collapsed="true">
+    <Position X="63.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAACAAAQAAAAAAAAAAAAAEAAAAAAACAE=</HashCode>
+      <FileName>ScriptEngine\Runtime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.MouseAction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>UI\BattleUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.UI.ControlFactory" Collapsed="true">
+    <Position X="6.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\ControlManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.ControlManager" Collapsed="true">
+    <Position X="52.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAIAAQAAAAAAAEAAAAAQAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>UI\ControlManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.InterfaceManager" Collapsed="true">
+    <Position X="26" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HAQAgASAACAAAgAAAAAAAAgAAQAAAAAQAAAAAAYSAAA=</HashCode>
+      <FileName>UI\InterfaceManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.UI.SkirmishLoadScreen" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAAACAAAFDAAAAAAAAAAAAAAAAAAIAAAACCAAA=</HashCode>
+      <FileName>UI\LoadScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.UI.UIImageInformation" Collapsed="true">
+    <Position X="63.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhEAAAAAAAAAAAQAAIAAAAAAAAABAAAE=</HashCode>
+      <FileName>UI\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.SideBar" Collapsed="true">
+    <Position X="16.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QASl3BwsRSEIgCAIBCAYwAhAAQgFACEQQKBjAA4ClAU=</HashCode>
+      <FileName>UI\SideBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.UITextureManagerBase" Collapsed="true">
+    <Position X="21" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\UITextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.CameoManager" Collapsed="true">
+    <Position X="19.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAgQIAAAAAAAAAAQAAAAAAQAAAABAAAAQ=</HashCode>
+      <FileName>UI\UITextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.UITextureManager" Collapsed="true">
+    <Position X="22" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEBAACAABAAQAAAAAAAAAAAQAAAAAAQAAAAAAAAAQ=</HashCode>
+      <FileName>UI\UITextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.BasicConfigFactory" Collapsed="true">
+    <Position X="3.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.AudioConfigFacotry" Collapsed="true">
+    <Position X="1" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.VideoConfigFactory" Collapsed="true">
+    <Position X="3.25" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.SkirmishConfigFactory" Collapsed="true">
+    <Position X="5.5" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.BasicConfigBase" Collapsed="true">
+    <Position X="8.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.AudioConfigs" Collapsed="true">
+    <Position X="6" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEABAgAQAAAAACAAAAAAAAUAAAAAAAABQAAAAAkAAUA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.VideoConfigs" Collapsed="true">
+    <Position X="8.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIFAAAAIAAEAAIAQAAABAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.SkirmishConfigs" Collapsed="true">
+    <Position X="10.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABCCAgEAAACACUoASgQEAAgQAIBBIoAgACECIlg=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.BasicConfigs" Collapsed="true">
+    <Position X="70.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkIAAAAAAAQBACAAAAAAAAQAAAgAAQAAAAAgAAAA=</HashCode>
+      <FileName>ConfigModel\BasicConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.ConfigModel.HotKeyConfigs" Collapsed="true">
+    <Position X="66.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>g5FAoMBBAOACAYB/AIIiQFIAMUMMIAAAwCNAAUFAABE=</HashCode>
+      <FileName>ConfigModel\HotKeyConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.ButtonFactory" Collapsed="true">
+    <Position X="3.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.Button" Collapsed="true">
+    <Position X="21" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAhAAQAACAIAAAIAAgAAABAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Button.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.CheckBox" Collapsed="true">
+    <Position X="12" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\CheckBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.DialogSettings" Collapsed="true">
+    <Position X="56.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Dialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.Dialog" Collapsed="true">
+    <Position X="14.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAgAIAAACAAEBgIAEBAADEABABtAAAAIIIACACCAAA=</HashCode>
+      <FileName>UI\Controls\Dialog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.DropDownFactory" Collapsed="true">
+    <Position X="5.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\DropDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.DropDown" Collapsed="true">
+    <Position X="23.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\DropDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.ImageControlFactory" Collapsed="true">
+    <Position X="8" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\ImageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.ImageControl" Collapsed="true">
+    <Position X="18.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAACAAAAAIAAAAAABAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\ImageControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.LabelFactory" Collapsed="true">
+    <Position X="10.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.Label" Collapsed="true">
+    <Position X="25.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAMAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.TextBoxFactory" Collapsed="true">
+    <Position X="12.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.TextBox" Collapsed="true">
+    <Position X="27.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAACAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.TextControl" Collapsed="true">
+    <Position X="24.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAYiAAAEADAAAAAIAAAhAAACAAAAAAAAAAAACAACAAA=</HashCode>
+      <FileName>UI\Controls\TextControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.TrackbarFactory" Collapsed="true">
+    <Position X="1.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Controls\Trackbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ra2Reload.UI.Controls.Trackbar" Collapsed="true">
+    <Position X="9.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQgAACAACAAEABIAAAAAABAABAAACAgIAAhIAAAAAA=</HashCode>
+      <FileName>UI\Controls\Trackbar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Ra2Reload.InputEngine.DIKeyboard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA4AAAAIACAAAABQCAAAAAAAAAAAAAAAAAAAAAAAAgg=</HashCode>
+      <FileName>InputEngine\DIKeyboard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.InputEngine.DIMouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="59.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQ4AAAAAACAAAEBAAgAAAEACAAAAEAAAAIAAAACAAAA=</HashCode>
+      <FileName>InputEngine\DIMouse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.InputEngine.Input" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAIACAAAEAAAAAAAEAAAAAAEAAAAIAAAACAAgA=</HashCode>
+      <FileName>InputEngine\Input.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ra2Reload.Win32Native.NativeMethods" Collapsed="true">
+    <Position X="56.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Win32Native\NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Ra2Reload.CmdArg" Collapsed="true">
+    <Position X="63.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAEAAAAAAAAABCEAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Pair&lt;T1, T2&gt;" Collapsed="true">
+    <Position X="58" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAQAAAAAAAAA=</HashCode>
+      <FileName>Pair.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.PlayerInfo" Collapsed="true">
+    <Position X="61.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAQAAAAFAAAAAQYAAAACAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.MeshFace" Collapsed="true">
+    <Position X="70.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAQAAAACgAQEAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPNT1" Collapsed="true">
+    <Position X="58" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAgAAIAAEBIAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPNT2" Collapsed="true">
+    <Position X="59.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAACwAAAAAEBIAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPNT3" Collapsed="true">
+    <Position X="61.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAIAAACwAAAAAEBIAAAAAAEA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPNT4" Collapsed="true">
+    <Position X="63.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAIAAACwAAAAAEBIAAAAAAEk=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPT1" Collapsed="true">
+    <Position X="65" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAgAAAAAABIAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPT2" Collapsed="true">
+    <Position X="66.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAACwAAAAAABIAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPT3" Collapsed="true">
+    <Position X="68.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAIAAACwAAAAAABIAAAAAAEA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPT4" Collapsed="true">
+    <Position X="70.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAAIAAACwAAAAAABIAAAAAAEk=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexPC" Collapsed="true">
+    <Position X="56.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIIAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.VertexP" Collapsed="true">
+    <Position X="54.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.TerrainVertex" Collapsed="true">
+    <Position X="66.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAABoAAAAAABIAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Terrain.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IO.ArchiveFileEntry" Collapsed="true">
+    <Position X="52.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>IO\FileStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IO.PcxHeader" Collapsed="true">
+    <Position X="59.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIACAIgAAQAAAIAAgAABAAAYAAAIAAAAAABEAAEAA=</HashCode>
+      <FileName>IO\FileStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IO.XccLmdHeader" Collapsed="true">
+    <Position X="61.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAIAAAAAACAABAAAIAAAAAAAAAgA=</HashCode>
+      <FileName>IO\FileStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.IsoMapPackEntry" Collapsed="true">
+    <Position X="65" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAEEAAAAAAAAAAAAAAAAABgASAAAAA=</HashCode>
+      <FileName>IsoMap\Map.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.IsoMapPackEntry3D" Collapsed="true">
+    <Position X="66.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQCAAIEBAEEAAAAIkAAAAIAAAAAABgAAAAgAA=</HashCode>
+      <FileName>IsoMap\Map3D.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.TerrainObjectInfo" Collapsed="true">
+    <Position X="65" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAYAA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.MapAtmosphereInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAGgAAAAAAAAAAACAAAAAAAAgJAAAAAAQBgAFAAhAAA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.CellData" Collapsed="true">
+    <Position X="58" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAEEAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>IsoMap\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.TmpHeader" Collapsed="true">
+    <Position X="68.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEQAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.IsoMap.TmpImageHeader" Collapsed="true">
+    <Position X="70.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAKAAAAUEAAAACEYMgAAAEIAAAAxgAAAEAAA=</HashCode>
+      <FileName>IsoMap\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Logic.Waypoint" Collapsed="true">
+    <Position X="58" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAYAA=</HashCode>
+      <FileName>Logic\BattleField.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.MathLib.Triangle" Collapsed="true">
+    <Position X="52.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgBAAAIAAAAAAIAAAAEEAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MathLib\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Media.VoxelSectionHeader" Collapsed="true">
+    <Position X="54.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Voxel.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Media.VoxelSectionTailer" Collapsed="true">
+    <Position X="56.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEgAEAAAQAAAAAAEAggAAAAiAAABEAAAAIAAAABA=</HashCode>
+      <FileName>Media\Voxel.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Media.VoxelData" Collapsed="true">
+    <Position X="52.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Media\VoxelSection.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Sound.AudioIdxHeader" Collapsed="true">
+    <Position X="56.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Sound\AudioBag.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Sound.AudioIdxEntry" Collapsed="true">
+    <Position X="54.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAAQAAAAAAAgAAIAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Sound\AudioBag.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.RenderOperation" Collapsed="true">
+    <Position X="63.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQ=</HashCode>
+      <FileName>GraphicsEngine\RenderOperation.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.GraphicsEngine.CellHeight" Collapsed="true">
+    <Position X="59.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAABAAAAAAAAgAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>GraphicsEngine\Terrain.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Logic.CellInfo" Collapsed="true">
+    <Position X="61.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAQAAAAAAEA=</HashCode>
+      <FileName>Logic\BattleField.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.MathLib.OctreeBox" Collapsed="true">
+    <Position X="56.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAACAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>MathLib\OctreeBox.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Win32Native.NativeRectangle" Collapsed="true">
+    <Position X="54.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAgAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Win32Native\NativeStructures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Win32Native.NativeMessage" Collapsed="true">
+    <Position X="52.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAAAQAAAAIAAAAAAAAAAAAEQAAAAAAAA=</HashCode>
+      <FileName>Win32Native\NativeStructures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Ra2Reload.Win32Native.WINDOWPLACEMENT" Collapsed="true">
+    <Position X="59.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAAAAAEAgAABAAAAAAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>Win32Native\NativeStructures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Ra2Reload.IAbstractFactory&lt;T, S&gt;" Collapsed="true">
+    <Position X="21.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.ConfigModel.IConfigurable" Collapsed="true">
+    <Position X="54.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel\IConfigurable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.Design.IEditControl&lt;T&gt;" Collapsed="true">
+    <Position X="56.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Design\IEditControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.GameResource.ICachedObjectManager" Collapsed="true">
+    <Position X="0.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\CachedObjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.GameResource.IResourceManager" Collapsed="true">
+    <Position X="0.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\ResourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.GameResource.IUniqueObjManager&lt;S, T&gt;" Collapsed="true">
+    <Position X="21.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GameResource\UniqueObjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.GraphicsEngine.IRenderable" Collapsed="true">
+    <Position X="63.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\IRenderable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.GraphicsEngine.ITileTexturePack" Collapsed="true">
+    <Position X="66.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAABAAAAAAAAAAAAEAAAAAAAQAAAAIAAABAAAA=</HashCode>
+      <FileName>GraphicsEngine\ITileTexturePack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.IO.IArchiveFactory" Collapsed="true">
+    <Position X="16.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\Archive.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.IsoMap.IMapFactory" Collapsed="true">
+    <Position X="18.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAEAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Map3DFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.IsoMap.ITheaterFactory" Collapsed="true">
+    <Position X="20.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\TheaterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.Media.IAnimFactory" Collapsed="true">
+    <Position X="23" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Factories.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.Media.IImageFactory" Collapsed="true">
+    <Position X="25.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Factories.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.Media.IVideoFactory" Collapsed="true">
+    <Position X="27.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\VideoManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.Sound.ISoundsFactory" Collapsed="true">
+    <Position X="65" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Sound\SoundsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.UI.IUserInterface" Collapsed="true">
+    <Position X="17.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEAIAAAAAAAAAAAAEAAAAAAAAACAAAA=</HashCode>
+      <FileName>UI\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.UI.IBattleLoadScreen" Collapsed="true">
+    <Position X="52.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>UI\Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.UI.IMenuPage" Collapsed="true">
+    <Position X="17.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAACAAAAAwAAQAAAAAQAQAAAAaQAAA=</HashCode>
+      <FileName>UI\MenuPageBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.UI.IMenuPageFactory" Collapsed="true">
+    <Position X="59.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\MenuPageBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.InputEngine.IKeyboard" Collapsed="true">
+    <Position X="58" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>InputEngine\Input.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ra2Reload.InputEngine.IMouse" Collapsed="true">
+    <Position X="61.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAIAAAACAAAA=</HashCode>
+      <FileName>InputEngine\Input.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Ra2Reload.ConsoleMessageType" Collapsed="true">
+    <Position X="63.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAQAAAAAAABAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ConsoleMessageType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ScriptSecurityType" Collapsed="true">
+    <Position X="56.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAQAACAAAAAAAEgAAAAABABABAAQAAAAIAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GameState" Collapsed="true">
+    <Position X="54.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAIAQAAAACgAAAAAAAAAAABA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.PlayerType" Collapsed="true">
+    <Position X="70.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAQAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ComputerPlayerLevel" Collapsed="true">
+    <Position X="61.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Core.NodeUseState" Collapsed="true">
+    <Position X="66.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Core\ImageQuadTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Core.CornerType" Collapsed="true">
+    <Position X="65" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Core\QuadTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GameResource.ResourceState" Collapsed="true">
+    <Position X="52.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\CachedObject.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GraphicsEngine.VertexFlags" Collapsed="true">
+    <Position X="68.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQ=</HashCode>
+      <FileName>GraphicsEngine\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GraphicsEngine.MaterialFlags" Collapsed="true">
+    <Position X="59.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAA=</HashCode>
+      <FileName>GraphicsEngine\MeshMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GraphicsEngine.Effects.EffectParameterBinding" Collapsed="true">
+    <Position X="66.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\Effects\EffectParameterBinding.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.GraphicsEngine.Effects.PassType" Collapsed="true">
+    <Position X="68.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAABgAAQAAAIAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>GraphicsEngine\Effects\Pass.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IO.FileID" Collapsed="true">
+    <Position X="68.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQAACAAAAAAAAAAAAAAAAAAAAEEAAAAQgAAAAAAAA=</HashCode>
+      <FileName>IO\FileStructs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IO.FileLocateRule" Collapsed="true">
+    <Position X="70.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAACAAIAAAAACAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\FileSystem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IsoMap.TmpImageBits" Collapsed="true">
+    <Position X="65" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>IsoMap\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IsoMap.TerrainType" Collapsed="true">
+    <Position X="63.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQAAAAAAAAAAIEAAAAAAQABgAAAAAAAAAABQQAA=</HashCode>
+      <FileName>IsoMap\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IsoMap.BlockBits" Collapsed="true">
+    <Position X="54.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAAAAAAAAAAAAAAAAAAAAAACAAQAAAAAEAAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IsoMap.BlockMaterialEffect" Collapsed="true">
+    <Position X="56.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Logic.CellTraffic" Collapsed="true">
+    <Position X="59.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Logic\BattleField.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Logic.WeatherType" Collapsed="true">
+    <Position X="70.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQIAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Logic\WeatherType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.MathLib.FrustumPlane" Collapsed="true">
+    <Position X="52.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgAAAAAAAAAAQAAAAAAAIAAAACACAAAAAAAA=</HashCode>
+      <FileName>MathLib\Frustum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Media.ImagePixelFormat" Collapsed="true">
+    <Position X="58" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBUAAEA4AAEgAAoQSoAACCQAAQBExggAIIQAAQCBALw=</HashCode>
+      <FileName>Media\ImageBase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ScriptEngine.MsgBoxResult" Collapsed="true">
+    <Position X="65" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ScriptEngine\Runtime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ScriptEngine.AssemblyProtectionFlags" Collapsed="true">
+    <Position X="52.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ScriptEngine.ScriptBinding" Collapsed="true">
+    <Position X="54.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>ScriptEngine\ScriptAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Sound.SoundPriority" Collapsed="true">
+    <Position X="59.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAgAAAAAAAAgIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sound\SoundBase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Sound.SoundControl" Collapsed="true">
+    <Position X="58" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAACAAAAAAAAAIAIBAAAAIAAAEEAAAA=</HashCode>
+      <FileName>Sound\SoundBase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Sound.SoundType" Collapsed="true">
+    <Position X="61.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAABMgAAAAAAAAQABAAA=</HashCode>
+      <FileName>Sound\SoundBase.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.UI.MenuType" Collapsed="true">
+    <Position X="63.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>UI\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.UI.MenuSlideState" Collapsed="true">
+    <Position X="61.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAEEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.IsoMap.BlockModelType" Collapsed="true">
+    <Position X="58" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IsoMap\Tile3D.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.Logic.UnitState" Collapsed="true">
+    <Position X="66.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIACAgYAAJBAAAAAAAEAAgKAMAAAAIBBAQgAAgCA=</HashCode>
+      <FileName>Logic\Techno.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ra2Reload.ConfigModel.HotKey" Collapsed="true">
+    <Position X="56.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIKK4X9UAIAgAEgIgIAHIigVCgUABDoKAIAAvv//ZVM=</HashCode>
+      <FileName>ConfigModel\HotKeyConfigs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Ra2Reload.LoadHandler" Collapsed="true">
+    <Position X="58" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.CloseHandler" Collapsed="true">
+    <Position X="52.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.UpdateHandler" Collapsed="true">
+    <Position X="66.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.PaintHandler2D" Collapsed="true">
+    <Position X="63.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.MouseHandler" Collapsed="true">
+    <Position X="59.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.GameResource.ObjectDisposingHandler&lt;T&gt;" Collapsed="true">
+    <Position X="61.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameResource\UniqueObjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.GraphicsEngine.GroupingCallBack" Collapsed="true">
+    <Position X="54.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>GraphicsEngine\TerrainTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.KeyHandler" Collapsed="true">
+    <Position X="56.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Ra2Reload.ParseHander" Collapsed="true">
+    <Position X="65" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Handlers.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>
