@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CM_ClassCount" xml:space="preserve">
+    <value>Class count: {0}</value>
+  </data>
+  <data name="CM_FileNotFonud" xml:space="preserve">
+    <value>File not found {0}.</value>
+  </data>
+  <data name="CM_FMODErr" xml:space="preserve">
+    <value>[FMOD Error] </value>
+  </data>
+  <data name="CM_IniKeywordRep" xml:space="preserve">
+    <value>[{0}] Section {1} have duplicated keywords {2}. Duplicated keywords will be ignored except the last one with non-empty value(s).</value>
+  </data>
+  <data name="CM_IniSegmentConcatErr" xml:space="preserve">
+    <value>[{0}] There are sections with a same name {1}. An error occured when trying to merge them. Error: {2}.</value>
+  </data>
+  <data name="CM_IniSegmentConcatKeyRep" xml:space="preserve">
+    <value>[{0}] There are sections with a same name {1}. Duplicated keywords {2} found then trying to merge the sections. Those keyword will be ignored.</value>
+  </data>
+  <data name="CM_IniSegmentRep" xml:space="preserve">
+    <value>[{0}] There are sections with a same name {1}. They will be merged into one section.</value>
+  </data>
+  <data name="CM_InvaildResol" xml:space="preserve">
+    <value>The screen resolution setting in ra2{0}.ini is invalid. Restored to 800x600.</value>
+  </data>
+  <data name="CM_MethodCount" xml:space="preserve">
+    <value>Method count: {0}</value>
+  </data>
+  <data name="CM_ObjNotInit" xml:space="preserve">
+    <value>Object {0} is not a instance(ScriptProc)</value>
+  </data>
+  <data name="CM_ScriptAssemblyLoaded" xml:space="preserve">
+    <value>Script assembly loaded {0}</value>
+  </data>
+  <data name="CM_ScriptAssemblyNotFound" xml:space="preserve">
+    <value>Script assembly not found {0}</value>
+  </data>
+  <data name="CM_TimerStarted" xml:space="preserve">
+    <value>Game timer started: {0}</value>
+  </data>
+  <data name="CM_TypeCount" xml:space="preserve">
+    <value>Type count{0}</value>
+  </data>
+  <data name="CM_UseDefaultSet" xml:space="preserve">
+    <value>Use default settings.</value>
+  </data>
+  <data name="Console" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="Console_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="ExPrint_Console" xml:space="preserve">
+    <value>Console: </value>
+  </data>
+  <data name="ExPrint_ExtraData" xml:space="preserve">
+    <value>Extra Data: </value>
+  </data>
+  <data name="ExPrint_LocalVars" xml:space="preserve">
+    <value>Local Variables: </value>
+  </data>
+  <data name="ExPrint_Method" xml:space="preserve">
+    <value>Method: </value>
+  </data>
+  <data name="ExPrint_ScriptError" xml:space="preserve">
+    <value>Script Error: </value>
+  </data>
+  <data name="ExPrint_Source" xml:space="preserve">
+    <value>Source: </value>
+  </data>
+  <data name="ExPrint_Time" xml:space="preserve">
+    <value>Time: </value>
+  </data>
+  <data name="ExPrint_Version" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="MsgLvl_Attention" xml:space="preserve">
+    <value>Attention: </value>
+  </data>
+  <data name="MsgLvl_Error" xml:space="preserve">
+    <value>ERROR: </value>
+  </data>
+  <data name="MsgLvl_Information" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MsgLvl_Normal" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MsgLvl_Warning" xml:space="preserve">
+    <value>WARNING: </value>
+  </data>
+  <data name="StrTable_Missing" xml:space="preserve">
+    <value>[MISSING]</value>
+  </data>
+  <data name="CM_AssemblyEncrypted" xml:space="preserve">
+    <value>Assembly is encrypted {0}</value>
+  </data>
+  <data name="Ex_InvaildFileFormat" xml:space="preserve">
+    <value>File {0} has a invalid format.</value>
+  </data>
+  <data name="Ex_ObjectAlreadyLoaded" xml:space="preserve">
+    <value>Object {0} have already loaded.</value>
+  </data>
+  <data name="Ex_ObjectNotInit" xml:space="preserve">
+    <value>Object {0} is not initialized.</value>
+  </data>
+  <data name="Ex_ScriptError" xml:space="preserve">
+    <value>Script Error</value>
+  </data>
+  <data name="CM_ScriptNotLoaded" xml:space="preserve">
+    <value>Object {0} 's script is not loaded. Probably due to the non-existance of its corresponding static class.</value>
+  </data>
+  <data name="Ex_ScriptSignMismatch" xml:space="preserve">
+    <value>The script function's argument doesn't match the corresponding event's. The arugment of {0} should be {1}.</value>
+  </data>
+  <data name="CM_ScriptNotUsed" xml:space="preserve">
+    <value>Object {0} 's script is not loaded. Because the object doesn't have a script name.</value>
+  </data>
+  <data name="CM_TileFileMissing" xml:space="preserve">
+    <value>Cannot find tile file {0}</value>
+  </data>
+  <data name="CM_MissingTileImage" xml:space="preserve">
+    <value>Cannot find tile texture {0}.</value>
+  </data>
+  <data name="CM_SoundNotFound" xml:space="preserve">
+    <value>Cannot find sound {0}</value>
+  </data>
+  <data name="ExPrint_Thread" xml:space="preserve">
+    <value>Thread: </value>
+  </data>
+  <data name="CM_ScriptLoaded" xml:space="preserve">
+    <value>Script have been loaded for object {0}.</value>
+  </data>
+  <data name="CM_IniParentMissing" xml:space="preserve">
+    <value>Ini section {0} is inherited from a missing section {1}.</value>
+  </data>
+</root>
