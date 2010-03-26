@@ -75,8 +75,9 @@ namespace R3D.Core
 
         //PicInPicVtx[] testQuad;
         //VertexDeclaration testDecl;
-
-
+        //Texture post1;
+        //Texture post2;
+        //Texture post3;
         //List<ISceneObject> renderQueue;
 
         ///// <summary>
@@ -307,13 +308,13 @@ namespace R3D.Core
             //testQuad[0].pos = new Vector2(0, 0);
             //testQuad[0].tex1 = new Vector2(0, 0);
             ////testQuad[0].dummy = 1;
-            //testQuad[1].pos = new Vector2(256, 0);
+            //testQuad[1].pos = new Vector2(800, 0);
             //testQuad[1].tex1 = new Vector2(1, 0);
             ////testQuad[1].dummy = 1;
-            //testQuad[2].pos = new Vector2(0, 256);
+            //testQuad[2].pos = new Vector2(0, 600);
             //testQuad[2].tex1 = new Vector2(0, 1);
             ////testQuad[2].dummy = 1;
-            //testQuad[3].pos = new Vector2(256, 256);
+            //testQuad[3].pos = new Vector2(800, 600);
             //testQuad[3].tex1 = new Vector2(1, 1);
             ////testQuad[3].dummy = 1;
             ////testDecl = new VertexDeclaration(device, D3DX.DeclaratorFromFVF(PicInPicVtx.Format));
