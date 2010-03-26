@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA72D449-B468-4698-A28D-926E2225FC5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ra2Develop</RootNamespace>
+    <AssemblyName>Ra2Develop</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>Ra2Develop.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=2.0.3.37, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SlimDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.2.2864.18696, Culture=neutral, PublicKeyToken=d481317c817cec47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicConfigs.cs" />
+    <Compile Include="ConverterManager.cs" />
+    <Compile Include="Converters\ConverterBase.cs" />
+    <Compile Include="Converters\ConvDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\ConvDlg.Designer.cs">
+      <DependentUpon>ConvDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\Map2Map3Converter.cs" />
+    <Compile Include="Converters\MeshSimpLvlDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\MeshSimpLvlDlg.Designer.cs">
+      <DependentUpon>MeshSimpLvlDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\Obj2ModelConverter.cs" />
+    <Compile Include="Converters\ProgressDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\ProgressDlg.Designer.cs">
+      <DependentUpon>ProgressDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\Tmp2Tile3DConverter.cs" />
+    <Compile Include="Converters\TmpConvDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\TmpConvDlg.Designer.cs">
+      <DependentUpon>TmpConvDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\MeshSimpDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\MeshSimpDlg.Designer.cs">
+      <DependentUpon>MeshSimpDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\Vxl2ModelConverter.cs" />
+    <Compile Include="Converters\VxlConvDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Converters\VxlConvDlg.Designer.cs">
+      <DependentUpon>VxlConvDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\XText2ModelConverter.cs" />
+    <Compile Include="Converters\Xml2ModelConverter.cs" />
+    <Compile Include="Designers\CsfDocumentConfigs.cs" />
+    <Compile Include="Designers\CsfDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\CsfDocument.Designer.cs">
+      <DependentUpon>CsfDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\CsfDocFactory.cs" />
+    <Compile Include="Designers\DocumentBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\DocumentConfigBase.cs" />
+    <Compile Include="Designers\IniCode.cs" />
+    <Compile Include="Designers\IniDocumentFactory.cs" />
+    <Compile Include="Designers\IniIntellisenseListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Designers\IniIntelliSenseModule.cs" />
+    <Compile Include="Designers\IniStructure.cs" />
+    <Compile Include="Designers\ModelDocumentFactory.cs" />
+    <Compile Include="Designers\IniCodeEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Designers\VertexElementDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\VertexElementDlg.Designer.cs">
+      <DependentUpon>VertexElementDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\EditableObjects\EditableBlock.cs" />
+    <Compile Include="Editors\EditableObjects\EditableBlockMaterial.cs" />
+    <Compile Include="Designers\EmbededMeshDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\EmbededMeshDocument.Designer.cs">
+      <DependentUpon>EmbededMeshDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\frmCsfEntryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\frmCsfEntryEdit.Designer.cs">
+      <DependentUpon>frmCsfEntryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\GeneralDocumentBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\GraphicsDevive.cs" />
+    <Compile Include="Designers\Interfaces.cs" />
+    <Compile Include="Designers\IniDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\IniDocument.Designer.cs">
+      <DependentUpon>IniDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\IniDocumentConfigs.cs" />
+    <Compile Include="Designers\ModelDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\ModelDocument.Designer.cs">
+      <DependentUpon>ModelDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\ModelDocumentConfigs.cs" />
+    <Compile Include="Designers\Tile3DDocumentFactory.cs" />
+    <Compile Include="Designers\Tile3DDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designers\Tile3DDocument.Designer.cs">
+      <DependentUpon>Tile3DDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\Tile3DDocumentConfigs.cs" />
+    <Compile Include="DesignerManager.cs" />
+    <Compile Include="DevUtils.cs" />
+    <Compile Include="Editors\ArrayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ArrayView.Designer.cs">
+      <DependentUpon>ArrayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\EditableObjects\EditableMesh.cs" />
+    <Compile Include="Editors\ModelEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\ModelEditControl.Designer.cs">
+      <DependentUpon>ModelEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ModelEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editors\MeshArrayEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\MeshArrayEditControl.Designer.cs">
+      <DependentUpon>MeshArrayEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\EditableObjects\EditableMeshMaterial.cs" />
+    <Compile Include="Editors\EditableObjects\EditableModel.cs" />
+    <Compile Include="Editors\EditableObjects\EditableTile3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editors\EmbededMeshEditor.cs" />
+    <Compile Include="Editors\ImageEditor.cs" />
+    <Compile Include="Editors\ImageEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\ImageEditControl.Designer.cs">
+      <DependentUpon>ImageEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Color4Editor.cs" />
+    <Compile Include="Editors\Color4EditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Color4EditControl.Designer.cs">
+      <DependentUpon>Color4EditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\BlockMaterialConverter.cs" />
+    <Compile Include="Editors\VertexFormatEditor.cs" />
+    <Compile Include="Editors\MeshArrayEditor.cs" />
+    <Compile Include="Editors\MeshMaterialConverter.cs" />
+    <Compile Include="Editors\RampTypeEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\RampTypeEditControl.Designer.cs">
+      <DependentUpon>RampTypeEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\RampTypeEditor.cs" />
+    <Compile Include="Editors\TextureEditor.cs" />
+    <Compile Include="Editors\TextureEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\TextureEditControl.Designer.cs">
+      <DependentUpon>TextureEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\VertexFormatEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\VertexFormatEditorControl.Designer.cs">
+      <DependentUpon>VertexFormatEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFileForm.Designer.cs">
+      <DependentUpon>NewFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformManager.cs" />
+    <Compile Include="Projects\ProjectBase.cs" />
+    <Compile Include="Projects\RlProject.cs" />
+    <Compile Include="Ra2FileSystem.cs" />
+    <Compile Include="SaveConfirmationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveConfirmationDlg.Designer.cs">
+      <DependentUpon>SaveConfirmationDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectMgr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Converters\ConvDlg.resx">
+      <DependentUpon>ConvDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converters\MeshSimpLvlDlg.resx">
+      <DependentUpon>MeshSimpLvlDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converters\ProgressDlg.resx">
+      <DependentUpon>ProgressDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converters\TmpConvDlg.resx">
+      <DependentUpon>TmpConvDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converters\MeshSimpDlg.resx">
+      <DependentUpon>MeshSimpDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converters\VxlConvDlg.resx">
+      <DependentUpon>VxlConvDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\CsfDocument.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CsfDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\EmbededMeshDocument.resx">
+      <DependentUpon>EmbededMeshDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\frmCsfEntryEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCsfEntryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\IniDocument.resx">
+      <DependentUpon>IniDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\ModelDocument.resx">
+      <DependentUpon>ModelDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\Tile3DDocument.resx">
+      <DependentUpon>Tile3DDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designers\VertexElementDlg.resx">
+      <DependentUpon>VertexElementDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ArrayView.resx">
+      <DependentUpon>ArrayView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\MeshArrayEditControl.resx">
+      <DependentUpon>MeshArrayEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ImageEditControl.resx">
+      <DependentUpon>ImageEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Color4EditControl.resx">
+      <DependentUpon>Color4EditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ModelEditControl.resx">
+      <DependentUpon>ModelEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\RampTypeEditControl.resx">
+      <DependentUpon>RampTypeEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\TextureEditControl.resx">
+      <DependentUpon>TextureEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\VertexFormatEditorControl.resx">
+      <DependentUpon>VertexFormatEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFileForm.resx">
+      <DependentUpon>NewFileForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveConfirmationDlg.resx">
+      <DependentUpon>SaveConfirmationDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ExplorerWindow.resx">
+      <DependentUpon>ExplorerWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResLocation.cs" />
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="Serialization.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateManager.cs" />
+    <Compile Include="Templates\TemplateBase.cs" />
+    <Compile Include="Templates\Templates.cs" />
+    <Compile Include="ToolManager.cs" />
+    <Compile Include="Tools\ExplorerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ExplorerWindow.Designer.cs">
+      <DependentUpon>ExplorerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ExplorerWndFactory.cs" />
+    <Compile Include="Tools\Interfaces.cs" />
+    <Compile Include="Tools\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\PropertyWndFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\R3D\R3D.csproj">
+      <Project>{A3C6F85B-FD36-4F06-9868-4A086D91287B}</Project>
+      <Name>R3D</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_BulletsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\NewItem.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Resources\gird.png" />
+    <Content Include="WeifenLuo.WinFormsUI.Docking.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
