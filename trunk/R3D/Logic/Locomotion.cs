@@ -124,9 +124,13 @@ namespace R3D.Logic
         bool isRotating;
         
 
-        float rotationDirection;
-        float rotationRadDiff;
-
+        //float rotationDirection;
+        //float rotationRadDiff;
+        //Quaternion rotationDirection;
+        Quaternion rotationSrc;
+        Quaternion rotationTarget;
+        Quaternion rotation;
+        float curRotLerp;
         //float curCellYaw;
 
         public bool JustInCell
@@ -142,7 +146,7 @@ namespace R3D.Logic
             //pathFinder = btfld.PathFinder.CreatePathFinder();
             //Quaternion.RotationYawPitchRoll(0, 0, 0, out orient);
             Description = desc;
-            rotationDirection = 1;
+            //rotationDirection = 1;
             JustInCell = true;
 
         }
@@ -326,22 +330,27 @@ namespace R3D.Logic
                 if (!isRotating)
                 {
                     isRotating = true;
-                    rotationRadDiff = MathEx.RadianDifference(targetYaw, unit.CellYaw);
-                    rotationDirection = rotationRadDiff > 0 ? 1 : -1;
+                    rotationSrc = Quaternion.RotationYawPitchRoll(0, unit.CellYaw, 0);
+                    rotationTarget = Quaternion.RotationYawPitchRoll(0, targetYaw, 0);// MathEx.RadianDifference(targetYaw, unit.CellYaw);
+                    //rotationDirection = rotationRadDiff > 0 ? 1 : -1;
                 }
             }
             else
             {
                 isRotating = false;
             }
-
             float incr = unit.Type.ROT * dt * (360f / 256f);
-            unit.Yaw += rotationDirection * incr;
-            unit.Yaw %= MathEx.PIf * 2;
+            
+            curRotLerp += incr;
+            rotation = Quaternion.Slerp(rotationSrc, rotationTarget, curRotLerp);
+            //
+            //unit.Yaw += rotationDirection * incr;
+            //unit.Yaw %= MathEx.PIf * 2;
+            unit.Yaw = rotation.Angle;
 
-
-            if (Math.Abs(unit.Yaw - targetYaw) < incr)
+            if (curRotLerp > 1)
             {
+                curRotLerp = 0;
                 unit.CellYaw = targetYaw;
                 unit.Yaw = targetYaw;
                 isRotating = false;

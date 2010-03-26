@@ -387,6 +387,7 @@ namespace R3D
         {
             EffectManager.Instance.RegisterModelEffectType(TerrainLightingEffectFactory.Name, new TerrainLightingEffectFactory(dev));
             EffectManager.Instance.RegisterModelEffectType(StandardEffectFactory.Name, new StandardEffectFactory(dev));
+            EffectManager.Instance.RegisterModelEffectType(TreeEffectFactory.Name, new TreeEffectFactory(dev));
             EffectManager.Instance.LoadEffects();
 
         }

@@ -155,6 +155,11 @@ namespace R3D.GraphicsEngine
             effectName = br.ReadStringUnicode();
             if (effectName.Length == 0)
                 effectName = StandardEffectFactory.Name;
+            if (IsTransparent)
+            {
+                effectName = TreeEffectFactory.Name;
+                IsTransparent = false;
+            }
             Effect = LoadEffect(effectName);
             
             br.Close();

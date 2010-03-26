@@ -111,6 +111,7 @@
     <Compile Include="GraphicsEngine\Effects\Pass.cs" />
     <Compile Include="GraphicsEngine\Effects\StandardEffect.cs" />
     <Compile Include="GraphicsEngine\Effects\TerrainLightingEffect.cs" />
+    <Compile Include="GraphicsEngine\Effects\TreeEffect.cs" />
     <Compile Include="GraphicsEngine\IRenderable.cs" />
     <Compile Include="GraphicsEngine\Mesh.cs" />
     <Compile Include="GraphicsEngine\MeshMaterial.cs" />

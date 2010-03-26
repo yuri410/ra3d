@@ -85,7 +85,7 @@ namespace R3D.GraphicsEngine.Effects
 
             string code = sr.ReadToEnd();
             string err;
-            effect = Effect.FromString(dev, code, null, null, null, ShaderFlags.None, null, out err);
+            effect = Effect.FromString(dev, code, null, null, null, ShaderFlags.OptimizationLevel3, null, out err);
             sr.Close();
 
             effect.Technique = new EffectHandle("TerrainLighting");
