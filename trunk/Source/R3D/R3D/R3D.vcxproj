@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -80,6 +88,7 @@
     <ClInclude Include="Engine\Core\Camera.h" />
     <ClInclude Include="Engine\Common.h" />
     <ClInclude Include="Engine\Core\IRenderable.h" />
+    <ClInclude Include="Engine\DXSDK.h" />
     <ClInclude Include="R3D.h" />
     <ClInclude Include="Engine\Core\RenderOperation.h" />
     <ClInclude Include="Resource.h" />
